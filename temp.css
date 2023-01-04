@@ -73,3 +73,7 @@ iframe {
 	position: absolute;
 	background: transparent;
 }
+
+#center_across{
+	display: flex; justify-tracks: center; flex-wrap:wrap;
+}
