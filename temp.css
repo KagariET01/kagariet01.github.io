@@ -25,6 +25,17 @@
 	font-family: Microsoft JhengHei;
 }
 
+#notebox{
+	width: 75%;
+	margin: 0 auto;
+	background-color: #222;
+	transform: skew(-20deg);
+	border: 3px solid #888;
+	border-radius: 6px;
+	text-align: center;
+	font-size: 16px;
+}
+
 #Ttext {
 	transform: skew(20deg);
 	color: #fff;
@@ -51,6 +62,7 @@
 
 body {
 	background-color: #000000;
+	font-family: Microsoft JhengHei;
 }
 
 a:link {
