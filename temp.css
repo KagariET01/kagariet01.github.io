@@ -25,7 +25,7 @@
 	font-family: Microsoft JhengHei;
 }
 
-#notebox{
+#notebox {
 	width: 75%;
 	margin: 0 auto;
 	background-color: #222;
@@ -86,7 +86,13 @@ iframe {
 	background: transparent;
 }
 
-#center_across{
-	display: flex; justify-tracks: center; flex-wrap:wrap;
+#center_across {
+	display: flex;
+	justify-tracks: center;
+	flex-wrap: wrap;
 }
 
+button {
+	background: none;
+	border: none;
+}
