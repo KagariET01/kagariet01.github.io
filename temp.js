@@ -3,7 +3,7 @@
 		.then(response => response.text())
 		.then(text => document.getElementById('top').innerHTML = text);
 }
-function ricktime() {
+function rickcode() {
 	fetch('https://kagariet01.github.io/rick.html')
 		.then(response => response.text())
 		.then(text => document.getElementById('rick').innerHTML = text);
