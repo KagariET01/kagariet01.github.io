@@ -3,8 +3,12 @@
 		.then(response => response.text())
 		.then(text => document.getElementById('top').innerHTML = text);
 }
-function rickcode() {
+{
 	fetch('https://kagariet01.github.io/rick.html')
 		.then(response => response.text())
 		.then(text => document.getElementById('rick').innerHTML = text);
+}
+document.getElementById('rick').style.display=none;
+function showrick(){
+	document.getElementById('rick').style.display=inline;
 }
