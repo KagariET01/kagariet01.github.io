@@ -10,5 +10,5 @@
 	document.getElementById('rick').style.display = "none";
 }
 function showrick() {
-	document.getElementById('rick').style.display = "inline";
+	document.getElementById('rick').style.display = "block";
 }
