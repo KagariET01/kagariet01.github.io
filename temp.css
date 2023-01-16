@@ -25,6 +25,18 @@
 	font-family: Microsoft JhengHei;
 }
 
+#prebox{
+padding: 1em;
+
+background-color: #222;
+
+border-left: 3px solid #fff;
+
+clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 0 100%);
+	
+	
+}
+
 #notebox {
 	width: 75%;
 	margin: 0 auto;
