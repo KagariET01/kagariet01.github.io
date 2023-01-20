@@ -92,6 +92,11 @@ a:active {
 	color: #fff;
 }
 
+#link{
+	text-decoration: underline;
+	color: #0ff;
+}
+
 iframe {
 	position: absolute;
 	background: transparent;
