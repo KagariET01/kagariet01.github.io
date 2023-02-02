@@ -3,15 +3,27 @@
 	margin: 0 auto;
 }
 
+body::after{
+	content: "ET01";
+	display: block;
+	text-align: center;
+	left: 0;
+	right: 0;
+	bottom: 0.5em;
+	color:#444;
+}
+/*box*/
+#box_border{
+	padding:2px;
+	background-color: #0ff;
+	clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));
+}
 #box {
-	color: #fff;
+	padding:2px;
 	background-color: #044;
-	transform: skew(-20deg);
-	border: 3px solid #0ff;
-	border-radius: 6px;
 	text-align: center;
 }
-
+/*
 #bottonbox {
 	width: 175px;
 	margin: 0 auto;
@@ -23,13 +35,18 @@
 	text-align: center;
 	font-size: 25px;
 	font-family: Microsoft JhengHei;
+}*/
+/*prebox*/
+#prebox_border{
+	padding:2px;
+	background-color: #fff;
+	clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));
 }
 
 #prebox {
 	padding: 1em;
-	background-color: #222;
-	border-left: 3px solid #fff;
-	clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 0 100%);
+	background-color: #111;
+	clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));
 }
 
 #notebox {
@@ -92,7 +109,7 @@ a:active {
 	color: #fff;
 }
 
-#link{
+#link {
 	text-decoration: underline;
 	color: #0ff;
 }
