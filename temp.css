@@ -79,7 +79,7 @@ body::after{
 }
 
 #main {
-	width: 65%;
+	width: 75%;
 	margin: 0 auto;
 	color: #fff;
 }
@@ -125,11 +125,15 @@ iframe {
 
 #center_across {
 	display: flex;
-	justify-tracks: center;
+	/*justify-tracks: center;*/
 	flex-wrap: wrap;
 }
 
 button {
 	background: none;
 	border: none;
+}
+/*文字相關*/
+#a_del_line{
+	text-decoration:line-through;
 }

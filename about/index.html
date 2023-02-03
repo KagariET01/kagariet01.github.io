@@ -5,6 +5,31 @@
 	<meta charset="UTF-8">
 	<title>ET01_web</title>
 	<link rel="stylesheet" type="text/css" href="../temp.css">
+	<style>
+		/*box_2*/
+		#box2_border {
+			padding: 2px;
+			background-color: #888;
+			clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));
+			margin: 0 auto;
+			width: 175px;
+		}
+
+		#box2 {
+			padding: 7px;
+			background-color: #111;
+			clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));
+			text-align: center;
+		}
+		h2{
+			text-align: center;
+		}
+		h3 {
+			color: #888;
+			font-size: 15px;
+			text-align: center;
+		}
+	</style>
 </head>
 
 
@@ -18,6 +43,7 @@
 		<div id="center">
 			<div id="prebox_border">
 				<div id="prebox">
+					<h2>自介</h2>
 					<p>嗨，你好，這裡是ET01<br>
 						一個很喜歡搞事的廢物<br>
 						常常聽到有人說我很電甚麼的<br>
@@ -29,7 +55,7 @@
 
 					<hr>
 
-					<p>自介</p>
+					<h2>個人資料</h2>
 					<p>暱稱：ET01,KagariET01</p>
 					<p>屬性：ㄌㄌㄎ,廢物,宅宅,林中Discord板主<br>歐對ㄌ想+林中Discord的私我DC（聯絡方式在下方）</p>
 					<p>喜歡的人：ㄌㄌ</p>
@@ -43,7 +69,7 @@
 
 					<hr>
 
-					<p>宅坑</p>
+					<h2>宅坑</h2>
 					<p>遊戲（入坑時間排序）：Minecraft, TETR.IO, 任天堂明星大亂鬥, Phigros, APEX, Rizline</p>
 					<p>動漫（入坑時間排序）：<br>
 						Rewrite(リライト)<br>
@@ -59,49 +85,60 @@
 						請問您今天要來點兔子嗎？(ご注文はうさぎですか？)
 					</p>
 
+					<hr>
+					<h2>連結</h2>
+					<!--link-->
+					<h3>社交</h3>
+					<div id="center_across">
+						<div id="box2_border" style="background-color: #F00">
+							<div id="box2" style="background-color: #400;">
+								<a href="https://www.youtube.com/@YT_ET01" target="_blank">
+									<div id="text">
+										YouTube<br>
+										@YT_ET01
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div id="box2_border" style="background-color: #66F">
+							<div id="box2" style="background-color: #224;">
+								<a href="http://discordapp.com/users/490796840438988800" target="_blank">
+									<div id="text">
+										Discord ID<br>
+										ET01#1130
+									</div>
+								</a>
+							</div>
+						</div>
+						<div id="box2_border" style="background-color: #444">
+							<div id="box2" style="background-color: #111;">
+								<a href="https://github.com/KagariET01" target="_blank">
+									<div id="text">
+										GitHub ID<br>
+										KagariET01
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div id="box2_border" style="background-color: #F80">
+							<div id="box2" style="background-color: #420;">
+								<a href="https://soundcloud.com/ytet01" target="_blank">
+									<div id="text">
+										SoundCloud<br>
+										ET01
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
 
 				</div>
 			</div>
-			<br>
-			<div id="center_across">
-				<!--link-->
-				<div id="bottonbox" style="background-color: #400;border: 3px solid #f00;">
-					<a href="https://www.youtube.com/@YT_ET01" target="_blank">
-						<div id="text">
-							YouTube<br>
-							@YT_ET01
-						</div>
-					</a>
-				</div>
 
-				<div id="bottonbox" style="background-color: #181844;border: 3px solid #6060ff;">
-					<a href="http://discordapp.com/users/490796840438988800" target="_blank">
-						<div id="text">
-							Discord ID<br>
-							ET01#1130
-						</div>
-					</a>
-				</div>
 
-				<div id="bottonbox" style="background-color: #111;border-color:#444;">
-					<a href="https://github.com/KagariET01" target="_blank">
-						<div id="text">
-							GitHub ID<br>
-							KagariET01
-						</div>
-					</a>
-				</div>
-
-				<div id="bottonbox" style="background-color: #420;border-color:#f80;">
-					<a href="https://soundcloud.com/ytet01" target="_blank">
-						<div id="text">
-							SoundCloud<br>
-							ET01
-						</div>
-					</a>
-				</div>
-
-			</div>
 		</div>
 	</div>
 </body>
