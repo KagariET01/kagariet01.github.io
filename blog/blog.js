@@ -1,4 +1,4 @@
-{//get URL tag and load blog
+function loadblog(){//get URL tag and load blog
 	const thisURL=window.location.search;
 	const thisURLtagtxt=thisURL;
 	console.log(thisURLtagtxt);
@@ -8,7 +8,7 @@
 	
 	document.getElementById('docs').innerHTML = postURL;
 
-	// fetch(postURL)
-	// 	.then(response => response.text())
-	// 	.then(text => document.getElementById('docs').innerHTML = text);
+	fetch(postURL)
+	 	.then(response => response.text())
+	 	.then(text => document.getElementById('docs').innerHTML = text);
 }
