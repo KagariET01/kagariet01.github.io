@@ -5,6 +5,7 @@
 	const URLtag=new URLSearchParams(thisURLtagtxt);//URLSearchParams：獲取參數(就是網址?後面的東西)
 	const URL_p=URLtag.get('p');//獲取文章編號
 	const postURL='https://kagariet01.github.io/blog/docs/'+URL_p+"/post.html";//postURL為要讀取的文章的檔案路徑
+	//const postURL='E:/git/kagariet01.github.io/blog/docs/'+URL_p+"/post.html";//postURL為要讀取的文章的檔案路徑
 	
 	//document.getElementById('docs').innerHTML = postURL;
 
