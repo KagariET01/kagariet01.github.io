@@ -10,7 +10,7 @@ body::after{
 	left: 0;
 	right: 0;
 	bottom: 0.5em;
-	color:#444;
+	color:#fff8;
 }
 /*box*/
 #box_border{
@@ -20,7 +20,7 @@ body::after{
 }
 #box {
 	padding:2px;
-	background-color: #022;
+	background-color: #000D;
 	clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));
 	text-align: center;
 }
@@ -47,7 +47,7 @@ body::after{
 
 #prebox {
 	padding: 1em;
-	background-color: #111;
+	background-color: #000D;
 	clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));
 }
 /*notebox*/
@@ -59,7 +59,7 @@ body::after{
 }
 #notebox {
 	padding: 1em;
-	background-color: #222;
+	background-color: #000D;
 	clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));
 	width: 75%;
 }
