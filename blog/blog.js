@@ -8,6 +8,12 @@
 	//const postURL='E:/git/kagariet01.github.io/blog/docs/'+URL_p+"/post.html";//postURL為要讀取的文章的檔案路徑
 	
 	//document.getElementById('docs').innerHTML = postURL;
+	
+	var reader=new FileReader();
+	
+
+
+
 
 	fetch(postURL)
 	 	.then(response => response.text())
