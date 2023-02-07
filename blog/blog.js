@@ -5,12 +5,11 @@
 	const URLtag=new URLSearchParams(thisURLtagtxt);//URLSearchParams：獲取參數(就是網址?後面的東西)
 	const URL_p=URLtag.get('p');//獲取文章編號
 	const postURL='https://kagariet01.github.io/blog/docs/'+URL_p+"/post.html";//postURL為要讀取的文章的檔案路徑
-	//const postURL='E:/git/kagariet01.github.io/blog/docs/'+URL_p+"/post.html";//postURL為要讀取的文章的檔案路徑
+	//const postURL='./docs/'+URL_p+"/post.html";//postURL為要讀取的文章的檔案路徑
 	
 	//document.getElementById('docs').innerHTML = postURL;
-	
-	var reader=new FileReader();
-	
+	console.log(postURL);
+
 
 
 
@@ -18,4 +17,12 @@
 	fetch(postURL)
 	 	.then(response => response.text())
 	 	.then(text => document.getElementById('docs').innerHTML = text);
+	
+
+	/*	
+	var reader=new FileReader();
+	reader.readAsText(postURL);
+	reader.onload=()=>{
+		
+	}*/
 }
