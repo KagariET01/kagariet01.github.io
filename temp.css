@@ -126,7 +126,7 @@ body::after {
 
 body {
 	background-color: #000000;
-	font-family: Microsoft JhengHei;
+	font-family: "Microsoft JhengHei";
 }
 
 a:link {
