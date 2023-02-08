@@ -90,20 +90,28 @@ body::after {
 	width: 75%;
 }
 
-
+/*font-face*/
+@font-face {
+	font-family: 'font-hun';
+	src:
+	url("https://kagariet01.github.io/font/hun/hun.woff2") format("woff"),
+	url("https://kagariet01.github.io/font/hun/hun.woff") format("woff"),
+	url("https://kagariet01.github.io/font/hun/hun.eot") format("embedded-opentype"),
+	url("https://kagariet01.github.io/font/hun/hun.ttf")format("truetype");
+}
 
 #Ttext {
 	/*title text*/
 	color: #fff;
 	font-size: 40px;
-	font-family: Microsoft JhengHei;
+	font-family: "Microsoft JhengHei";
 }
 
 #text {
 	/*內文text*/
 	color: #fff;
 	font-size: 25px;
-	font-family: Microsoft JhengHei;
+	font-family: "Microsoft JhengHei";
 }
 
 #main {
