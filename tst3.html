@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+	<meta charset="UTF-8">
+</head>
+
+
+<body>
+	<script>
+		function solve();
+	</script>
+	我想要<input id="inputer" type="number" value="2" />以內的所有質數<br>
+	<input type="submit" onclick=solve() />
+	<div id="prime">
+		2,</div>
+	<script>
+		function solve() {
+			var vec = [2];
+			var mx = document.getElementById("inputer").value;
+			for (var i = 3; i <= mx; i += 2) {
+				var canit = true;
+				for (var j = 0; j < vec.length; j++) {
+					if (!(i % vec[j])) {
+						canit = false;
+						break;
+					}
+				}
+				if (canit) {
+					document.getElementById('prime').innerHTML = document.getElementById('prime').innerHTML + i + ",";
+					vec.push(i);
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>

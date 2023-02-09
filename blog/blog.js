@@ -12,13 +12,6 @@
 	
 	//document.getElementById('docs').innerHTML = postURL;
 	console.log(postURL);
-	function thisfile(a){
-		return document.getElementById(a);
-	}
-
-
-
-
 
 	fetch(postURL)
 	 	.then(response => response.text())
