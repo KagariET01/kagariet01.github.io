@@ -1,4 +1,7 @@
 
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
 var board = "";
 {
 	//load temp
