@@ -5,7 +5,11 @@
 	<meta charset="UTF-8">
 	<title>ET01_web</title>
 	<link rel="stylesheet" type="text/css" href="temp.css">
-	</style>
+	<script>
+
+		import { createRequire } from 'module';
+		const require = createRequire(import.meta.url);
+	</script>
 </head>
 
 
@@ -18,11 +22,11 @@
 	<!--內文here-->
 	<div id="main">
 		<div id="center">
-			
+
 			<div id="blog_list"><!--告訴js要把文章list放這裡-->
 				<div id="box_border" style="background-color: #888;width: 100%;">
 					<div id="box" style="margin:0 auto;">
-					<div id="doc_here"></div><!--告訴js要把文章放這裡-->
+						<div id="doc_here"></div><!--告訴js要把文章放這裡-->
 					</div>
 				</div>
 			</div>
