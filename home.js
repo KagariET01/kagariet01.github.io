@@ -12,7 +12,7 @@ async function catcher(url) {//函數(前面有async是為了在函數裡面寫a
 }
 //fn字串轉html
 function stoHTML(str) {
-	var re=document.createElement();
+	var re=document.createElement("");
 	re.innerHTML=str;
 	return re;
 }
