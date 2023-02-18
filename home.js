@@ -10,7 +10,7 @@ async function catcher(url) {//函數(前面有async是為了在函數裡面寫a
 		return null;
 	}
 }
-fn字串轉html
+//fn字串轉html
 function stoHTML(str) {
   const parser = new DOMParser(); // 创建 DOMParser 对象
   const doc = parser.parseFromString(str, "text/html"); // 解析字符串为 DOM 对象
