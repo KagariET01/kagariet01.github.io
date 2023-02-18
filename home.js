@@ -12,15 +12,9 @@ async function catcher(url) {//函數(前面有async是為了在函數裡面寫a
 }
 //fn字串轉html
 function stoHTML(str) {
-  const parser = new DOMParser(); // 创建 DOMParser 对象
-  const doc = parser.parseFromString(str, "text/html"); // 解析字符串为 DOM 对象
-  const html = doc.documentElement.outerHTML; // 获取解析后的 HTML
-  // 判断是否为有效 HTML
-  if (html.toLowerCase().includes("<html") && html.toLowerCase().includes("<body")) {
-    return doc;
-  } else {
-    return null;
-  }
+	var re=document.createElement();
+	re.innerHTML=str;
+	return re;
 }
 
 var tmp=stoHTML(catcher("https://kagariet01.github.io/blog_tmp.html"));
@@ -32,11 +26,13 @@ if(tmp!=null){
 	while(true){
 		var nw=catcher("https://kagariet01.github.io/blog/docs/"+i+"/post.html");
 		if(nw!=null){
-			tmp.getElementById("docs").innerHTML=nw;
-			alldoc=nw+alldoc+tmp;
+			tmp.querySelector("#docs").innerHTML=nw;
+			alldoc=alldoc+String(tmp);
 		}
 		i++
 	}
 }
 
 document.getElementsById("blog_list").innerHTML=alldoc;
+
+console.log(alldoc);
