@@ -32,7 +32,7 @@ if(tmp!=null){
 	while(true){
 		var nw=catcher("https://kagariet01.github.io/blog/docs/"+i+"/post.html");
 		if(nw!=null){
-			tmp.getElementById("docs")=nw;
+			tmp.getElementById("docs").innerHTML=nw;
 			alldoc=nw+alldoc+tmp;
 		}
 		i++
