@@ -8,3 +8,6 @@
 #time{
 	color:#ccc;
 }
+#del_line{
+	text-decoration: line-through;
+}
