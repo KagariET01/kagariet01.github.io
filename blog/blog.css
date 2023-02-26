@@ -1,7 +1,10 @@
 #minitxt{
-	color:#444;
-	font-size: 12px;
+	color:#888;
+	font-size: 18px;
 }
 #ET01{
 	color:#f00;
+}
+#time{
+	color:#ccc;
 }

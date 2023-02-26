@@ -19,6 +19,7 @@ body::after {
 	background-color: #0ff;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	clip-path: polygon(0 1em, 1em 0, 100% 0, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0 100%);
+	box-sizing: border-box;
 }
 
 #box {
@@ -36,6 +37,7 @@ body::after {
 	clip-path: polygon(0 1em, 1em 0, 100% 0, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0 100%);
 	margin: 0 auto;
 	width: 200px;
+	box-sizing: border-box;
 }
 
 #box2 {
@@ -64,11 +66,12 @@ body::after {
 	background-color: #fff;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	clip-path: polygon(0 1em, 1em 0, 100% 0, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0 100%);
+	box-sizing: border-box;
 }
 
 #prebox {
 	padding: 1em;
-	background-color: #000D;
+	background-color: #000f;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	clip-path: polygon(0 1em, 1em 0, 100% 0, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0 100%);
 }
@@ -79,6 +82,7 @@ body::after {
 	background-color: #888;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	clip-path: polygon(0 1em, 1em 0, 100% 0, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0 100%);
+	box-sizing: border-box;
 
 }
 
