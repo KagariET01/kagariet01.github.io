@@ -45,7 +45,7 @@ if (tmp != null) {
 		var nw = catcher("https://kagariet01.github.io/blog/docs/" + i + "/post.html");
 		if (nw != null) {
 			var nwhtml=stoHTML(nw);
-			nwhtml.querySelector("#title").a = "https://kagariet01.github.io/blog/?p="+i;
+			nwhtml.querySelector("#title").href = "https://kagariet01.github.io/blog/?p="+i;
 			tmp.querySelector("#docs").innerHTML = nwhtml.innerHTML;//將獲得的文章放入模板
 			console.log(tmp);
 			var ad = tmp.innerHTML;
