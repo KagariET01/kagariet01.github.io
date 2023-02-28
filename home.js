@@ -44,7 +44,9 @@ if (tmp != null) {
 	while (true) {
 		var nw = catcher("https://kagariet01.github.io/blog/docs/" + i + "/post.html");
 		if (nw != null) {
-			tmp.querySelector("#docs").innerHTML = nw;//將獲得的文章放入模板
+			var nwhtml=stoHTML(nw);
+			nwhtml.getElementById("title").a = "https://kagariet01.github.io/blog/?p="+i;
+			tmp.querySelector("#docs").innerHTML = nwhtml;//將獲得的文章放入模板
 			console.log(tmp);
 			var ad = tmp.innerHTML;
 			alldoc = ad + alldoc;//將文章插入文章列表裡
