@@ -39,7 +39,7 @@
 	dcHTML.querySelector('#title').href = "https://kagariet01.github.io/blog/?p="+URL_p;
 
 
-	document.getElementById('docs').innerHTML = dcHTM.innerHTMLL;
+	document.getElementById('docs').innerHTML = dcHTML.innerHTML;
 	
 
 	/*	
