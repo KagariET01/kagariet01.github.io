@@ -36,7 +36,7 @@
 
 	var dcstxt=catcher(postURL);
 	var dcHTML=stoHTML(dcstxt);
-	dcHTML.getElementById('title').a = "https://kagariet01.github.io/blog/?p="+URL_p;
+	dcHTML.querySelector('#title').a = "https://kagariet01.github.io/blog/?p="+URL_p;
 
 
 	document.getElementById('docs').innerHTML = dcHTML;
