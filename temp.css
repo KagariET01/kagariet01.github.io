@@ -28,6 +28,7 @@ body::after {
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	clip-path: polygon(0 1em, 1em 0, 100% 0, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0 100%);
 	text-align: center;
+	height: calc(100% - 4px);
 }
 /*box2*/
 #box2_border {
@@ -46,6 +47,7 @@ body::after {
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	clip-path: polygon(0 1em, 1em 0, 100% 0, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0 100%);
 	text-align: center;
+	height: calc(100% - 14px);
 }
 /*
 #bottonbox {
