@@ -24,11 +24,14 @@ function stoHTML(str) {
 	re.innerHTML = str.trim();//將str放入re裡面(trim為去除空格，系統會自動將字串轉換成html格式)
 	return re;
 }
+function stoJSON(str){
+	return eval("(" + str + ")");
+}
 
 
 var tmptxt = catcher("https://kagariet01.github.io/blog_tmp.html");
 var tmp = stoHTML(tmptxt);
-console.log(tmp);
+//console.log(tmp);
 
 var alldoc = "";
 
@@ -39,9 +42,10 @@ if (tmp != null) {
 		if (nw != null) {
 			var nwHTML=stoHTML(nw);
 			var post_Tag;
+			post_Tag=stoJSON(nwHTML.querySelector("#tag").innerHTML);
+			console.log(post_Tag);
+			if(post_Tag["hide"] && URLtag.get("showhide")!=true)continue;
 			try{
-				post_Tag=JSON.stringify(nwHTML.querySelector("#tag").innerHTML);
-				if(post_Tag["hide"] && URLtag.get("showhide")!=true)continue;
 			}catch(error){
 				post_Tag=null;
 			}
@@ -49,7 +53,7 @@ if (tmp != null) {
 			var nwhtml=stoHTML(nw);
 			nwhtml.querySelector("#title").href = "https://kagariet01.github.io/blog/?p="+i;
 			tmp.querySelector("#docs").innerHTML = nwhtml.innerHTML;//將獲得的文章放入模板
-			console.log(tmp);
+			//console.log(tmp);
 			var ad = tmp.innerHTML;
 			alldoc = ad +"<br>"+ alldoc;//將文章插入文章列表裡
 		}else break;
