@@ -40,7 +40,7 @@ if (tmp != null) {
 			var nwHTML=stoHTML(nw);
 			var post_Tag;
 			try{
-				post_Tag=nwHTML.querySelector("#tag").innerHTML;
+				post_Tag=JSON.stringify(nwHTML.querySelector("#tag").innerHTML);
 				if(post_Tag["hide"] && URLtag.get("showhide")!=true)continue;
 			}catch(error){
 				post_Tag=null;
