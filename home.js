@@ -1,15 +1,8 @@
+const thisURL=window.location.search;
+const thisURLtagtxt=thisURL;
+const URLtag=new URLSearchParams(thisURLtagtxt)
+console.log("網址tag="+URLtag);
 
-/*async function catcher(url) {//函數(前面有async是為了在函數裡面寫await)
-	try {
-		const response = await fetch(url); // 发送请求并等待响应
-		//await:等待 fetch=抓取url
-		const data = await response.text(); // 提取响应内容并等待转化为文本
-		return data; // 返回响应内容
-	} catch (error) {
-		console.error(error); // 处理错误信息
-		return null;
-	}
-}*/
 
 function catcher(url) {
 	var xhttp = new XMLHttpRequest();//xhttp為可讀取檔案的功能變數
@@ -44,6 +37,15 @@ if (tmp != null) {
 	while (true) {
 		var nw = catcher("https://kagariet01.github.io/blog/docs/" + i + "/post.html");
 		if (nw != null) {
+			var nwHTML=stoHTML(nw);
+			var post_Tag;
+			try{
+				post_Tag=nwHTML.querySelector("#tag").innerHTML;
+				if(post_Tag["hide"] && URLtag.get("showhide")!=true)continue;
+			}catch(error){
+				post_Tag=null;
+			}
+
 			var nwhtml=stoHTML(nw);
 			nwhtml.querySelector("#title").href = "https://kagariet01.github.io/blog/?p="+i;
 			tmp.querySelector("#docs").innerHTML = nwhtml.innerHTML;//將獲得的文章放入模板
