@@ -25,7 +25,7 @@ function stoHTML(str) {
 	return re;
 }
 function stoJSON(str){
-	var re=str;
+	var re=JSON.parse(str);
 	return re;
 }
 
@@ -44,11 +44,11 @@ if (tmp != null) {
 		if (nw != null) {
 			var nwHTML=stoHTML(nw);
 			var post_Tag;
-			post_Tag=stoJSON(nwHTML.querySelector("#jsonData").innerHTML);
-			console.log(post_Tag);
-			console.log(typeof(post_Tag));
-			if(post_Tag["hide"] && URLtag.get("showhide")!=true)continue;
 			try{
+				post_Tag=stoJSON(nwHTML.querySelector("#jsonData").innerHTML);
+				console.log(post_Tag);
+				console.log(typeof(post_Tag));
+				if(post_Tag["hide"] && URLtag.get("showhide")!=true){i++;continue;}
 			}catch(error){
 				post_Tag=null;
 			}
