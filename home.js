@@ -46,6 +46,7 @@ if (tmp != null) {
 			var post_Tag;
 			post_Tag=stoJSON(nwHTML.querySelector("#jsonData").innerHTML);
 			console.log(post_Tag);
+			console.log(typeof(post_Tag));
 			if(post_Tag["hide"] && URLtag.get("showhide")!=true)continue;
 			try{
 			}catch(error){
