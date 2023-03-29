@@ -25,8 +25,6 @@ function stoHTML(str) {
 	return re;
 }
 function stoJSON(str){
-	console.log(str);
-	//var re=eval(/*"(" +*/ str /*+ ")"*/);
 	var re=JSON.parse(str);
 	return re;
 }
@@ -35,6 +33,7 @@ function stoJSON(str){
 var tmptxt = catcher("https://kagariet01.github.io/blog_tmp.html");
 var tmp = stoHTML(tmptxt);
 //console.log(tmp);
+var jsonex={"test":"test"};
 
 var alldoc = "";
 
@@ -45,10 +44,11 @@ if (tmp != null) {
 		if (nw != null) {
 			var nwHTML=stoHTML(nw);
 			var post_Tag;
-			post_Tag=stoJSON(nwHTML.querySelector("#tag").innerHTML);
-			console.log(post_Tag);
-			if(post_Tag["hide"] && URLtag.get("showhide")!=true)continue;
 			try{
+				post_Tag=stoJSON(nwHTML.querySelector("#jsonData").innerHTML);
+				//console.log(post_Tag);
+				//console.log(typeof(post_Tag));
+				if(post_Tag["hide"] && URLtag.get("showhide")!=1){i++;continue;}
 			}catch(error){
 				post_Tag=null;
 			}
