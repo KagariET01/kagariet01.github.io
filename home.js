@@ -25,7 +25,10 @@ function stoHTML(str) {
 	return re;
 }
 function stoJSON(str){
-	return eval("(" + str + ")");
+	console.log(str);
+	//var re=eval(/*"(" +*/ str /*+ ")"*/);
+	var re=JSON.parse(str);
+	return re;
 }
 
 
