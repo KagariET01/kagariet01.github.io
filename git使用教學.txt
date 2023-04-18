@@ -1,0 +1,9 @@
+merge:
+首先先切換到最終的branch (branch a)
+可使用 git checkout <branch a>
+再來，使用git merge <branch b>
+這樣，branch b就會加入 branch a裡了
+
+
+刪除遠端分支
+git push <remote_name> -d <remote_branch_name>
