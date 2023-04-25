@@ -16,15 +16,15 @@ body::after {
 /*box*/
 #box_border {
 	padding: 2px;
-	background-color: #0ff;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
-	clip-path: polygon(0 1em, 1em 0, 100% 0, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0 100%);
 	box-sizing: border-box;
+
+	box-shadow: 0 0 20px 1px #0ff;;
 }
 
 #box {
 	padding: 2px;
-	background-color: #000D;
+	background-color: #0ff;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	clip-path: polygon(0 1em, 1em 0, 100% 0, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0 100%);
 	text-align: center;
@@ -39,6 +39,8 @@ body::after {
 	margin: 0 auto;
 	width: 200px;
 	box-sizing: border-box;
+
+	box-shadow: 0 0 50px 10px #888;
 }
 
 #box2 {
