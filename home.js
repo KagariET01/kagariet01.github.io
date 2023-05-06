@@ -30,7 +30,7 @@ function stoJSON(str){
 }
 
 
-var tmptxt = catcher("https://kagariet01.github.io/blog_tmp.html");
+var tmptxt = catcher("https://kagariet01.github.io/TEMP/blog_tmp.html");
 var tmp = stoHTML(tmptxt);
 //console.log(tmp);
 var jsonex={"test":"test"};

@@ -21,3 +21,6 @@ git fetch
 git checkout -b <本地分支名x> <遠端分支>/<远程分支名x>
 拉取所有分支代码
 git pull --all
+
+下載遠端分支
+git checkout <分支>
