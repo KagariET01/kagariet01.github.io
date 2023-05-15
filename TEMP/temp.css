@@ -180,3 +180,11 @@ button {
 #a_del_line {
 	text-decoration: line-through;
 }
+
+.x_center {/*水平置中*/
+	justify-content: center;
+}
+
+.y_center {/*垂直置中*/
+	align-content: center;
+}
