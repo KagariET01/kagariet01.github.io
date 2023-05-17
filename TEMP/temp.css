@@ -19,22 +19,25 @@ body::after {
   border-width: 4px;
 	border-color: #0ff;
 	
-	background-color:#000;
+	background-color:#0000;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	box-sizing: border-box;
 	border-radius:10px;
 
 	box-shadow: 0 0 15px 5px #0ff;
+	width: 200px;
 }
 
 #box {
-	background-color: #000;
+	background-color: #0008;
 	border-radius:6px;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	/*text-align: center;*/
 	padding: 15px;
 	box-shadow: inset 0em 0em 15px 5px #0ff;
 	color: #fff;
+	width: 100%;
+	height: auto;
 }
 /*box2*/
 #box2_border {
@@ -42,22 +45,25 @@ body::after {
   border-width: 4px;
 	border-color: #888;
 	
-	background-color:#000;
+	background-color:#0000;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	box-sizing: border-box;
 	border-radius:10px;
 
-	box-shadow: 0 0 15px 5px #0ff;
+	box-shadow: 0 0 15px 5px #888;
+	width: 200px;
 }
 
 #box2 {
-	background-color: #000;
+	background-color: #0008;
 	border-radius:6px;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	/*text-align: center;*/
 	padding: 15px;
-	box-shadow: inset 0em 0em 15px 5px #0ff;
+	box-shadow: inset 0em 0em 15px 5px #888;
 	color: #fff;
+	width: 100%;
+	height: auto;
 }
 /*
 #bottonbox {
@@ -74,18 +80,27 @@ body::after {
 }*/
 /*prebox*/
 #prebox_border {
-	padding: 2px;
-	background-color: #fff;
+	border-style: solid;
+  border-width: 4px;
+	border-color: #fff;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
-	clip-path: polygon(0 1em, 1em 0, 100% 0, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0 100%);
 	box-sizing: border-box;
+	border-radius:10px;
+
+	box-shadow: 0 0 15px 5px #fff;
+	width: 200px;
 }
 
 #prebox {
-	padding: 1em;
-	background-color: #000f;
+	background-color: #0008;
+	border-radius:6px;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
-	clip-path: polygon(0 1em, 1em 0, 100% 0, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0 100%);
+	/*text-align: center;*/
+	padding: 15px;
+	box-shadow: inset 0em 0em 15px 5px #fff;
+	color: #fff;
+	width: 100%;
+	height: auto;
 }
 
 /*notebox*/
