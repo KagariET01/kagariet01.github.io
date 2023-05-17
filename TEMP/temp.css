@@ -25,7 +25,6 @@ body::after {
 	border-radius:10px;
 
 	box-shadow: 0 0 15px 5px #0ff;
-	width: 200px;
 }
 
 #box {
@@ -36,8 +35,6 @@ body::after {
 	padding: 15px;
 	box-shadow: inset 0em 0em 15px 5px #0ff;
 	color: #fff;
-	width: 100%;
-	height: auto;
 }
 /*box2*/
 #box2_border {
@@ -51,7 +48,6 @@ body::after {
 	border-radius:10px;
 
 	box-shadow: 0 0 15px 5px #888;
-	width: 200px;
 }
 
 #box2 {
@@ -62,8 +58,6 @@ body::after {
 	padding: 15px;
 	box-shadow: inset 0em 0em 15px 5px #888;
 	color: #fff;
-	width: 100%;
-	height: auto;
 }
 /*
 #bottonbox {
@@ -88,7 +82,6 @@ body::after {
 	border-radius:10px;
 
 	box-shadow: 0 0 15px 5px #fff;
-	width: 200px;
 }
 
 #prebox {
@@ -99,8 +92,6 @@ body::after {
 	padding: 15px;
 	box-shadow: inset 0em 0em 15px 5px #fff;
 	color: #fff;
-	width: 100%;
-	height: auto;
 }
 
 /*notebox*/
