@@ -15,20 +15,27 @@ body::after {
 
 /*box*/
 #box_border {
-	padding: 2px;
+	
+	border-style: solid;
+  border-width: 4px;
+	border-color: #0ff;
+	
+	background-color:#000;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	box-sizing: border-box;
+	border-radius:10px;
 
-	box-shadow: 0 0 20px 1px #0ff;;
+	box-shadow: 0 0 15px 5px #0ff;
 }
 
 #box {
-	padding: 2px;
-	background-color: #0ff;
+	background-color: #000;
+	border-radius:6px;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
-	clip-path: polygon(0 1em, 1em 0, 100% 0, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0 100%);
-	text-align: center;
-	height: calc(100% - 4px);
+	/*text-align: center;*/
+	padding: 15px;
+	box-shadow: inset 0em 0em 15px 5px #0ff;
+	color: #fff;
 }
 /*box2*/
 #box2_border {
