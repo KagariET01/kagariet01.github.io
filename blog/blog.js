@@ -7,7 +7,7 @@
 	if(URL_p==null){
 		URL_p="null";
 	}
-	const postURL='https://kagariet01.github.io/blog/docs/'+URL_p+"/post.html";//postURL為要讀取的文章的檔案路徑
+	const postURL='/blog/docs/'+URL_p+"/post.html";//postURL為要讀取的文章的檔案路徑
 	//const postURL='./docs/'+URL_p+"/post.html";//postURL為要讀取的文章的檔案路徑
 	
 	//document.getElementById('docs').innerHTML = postURL;
@@ -36,7 +36,7 @@
 
 	var dcstxt=catcher(postURL);
 	var dcHTML=stoHTML(dcstxt);
-	dcHTML.querySelector('#title').href = "https://kagariet01.github.io/blog/?p="+URL_p;
+	dcHTML.querySelector('#title').href = "/blog/?p="+URL_p;
 
 
 	document.getElementById('docs').innerHTML = dcHTML.innerHTML;
