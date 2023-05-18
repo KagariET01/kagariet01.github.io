@@ -1,6 +1,7 @@
 :root{
 	--box_color: #0ff;
 	--box2_color:#888;
+	--shadow_l: 15px;
 }
 
 #Header {
@@ -19,7 +20,10 @@ body::after {
 }
 
 /*box*/
-#box_border {
+.box_padding{
+	padding: var(--shadow_l);
+}
+.box_border {
 	border-style: solid;
   border-width: 4px;
 	border-color: var(--box_color);
@@ -29,19 +33,22 @@ body::after {
 	box-sizing: border-box;
 	border-radius:10px;
 
-	box-shadow: 0 0 15px 5px var(--box_color);
+	box-shadow: 0 0 var(--shadow_l) 5px var(--box_color);
+	width:auto;
 }
 
-#box {
+.box {
 	background-color: #0008;
 	border-radius:6px;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	/*text-align: center;*/
-	padding: 15px;
-	box-shadow: inset 0em 0em 15px 5px var(--box_color);
+	padding: var(--shadow_l);
+	box-shadow: inset 0em 0em var(--shadow_l) 5px var(--box_color);
 	color: #fff;
+	text-align: center;
 }
 /*box2*/
+/*
 #box2_border {
 	border-style: solid;
   border-width: 4px;
@@ -60,7 +67,7 @@ body::after {
 	padding: 15px;
 	box-shadow: inset 0em 0em 15px 5px var(--box_color);
 	color: #fff;
-}
+}*/
 /*
 #bottonbox {
 	width: 175px;
@@ -75,7 +82,7 @@ body::after {
 	font-family: Microsoft JhengHei;
 }*/
 /*prebox*/
-#prebox_border {
+.prebox_border {
 	border-style: solid;
   border-width: 4px;
 	border-color: #fff;
@@ -83,16 +90,16 @@ body::after {
 	box-sizing: border-box;
 	border-radius:10px;
 
-	box-shadow: 0 0 15px 5px #fff;
+	box-shadow: 0 0 var(--shadow_l) 5px #fff;
 }
 
-#prebox {
+.prebox {
 	background-color: #0008;
 	border-radius:6px;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	/*text-align: center;*/
-	padding: 15px;
-	box-shadow: inset 0em 0em 15px 5px #fff;
+	padding: var(--shadow_l);
+	box-shadow: inset 0em 0em var(--shadow_l) 5px #fff;
 	color: #fff;
 }
 
@@ -153,6 +160,11 @@ body {
 	font-family: "Microsoft JhengHei";
 }
 
+a{
+	width: auto;
+	height: auto;
+}
+
 a:link {
 	text-decoration: none;
 	color: #fff;
@@ -185,8 +197,13 @@ iframe {
 
 #center_across {
 	display: flex;
-	/*justify-tracks: center;*/
-	flex-wrap: wrap;
+	justify-content: center;/*物件水平對齊：置中*/
+	align-content: flex-start;/*垂直對齊：分散*/
+	align-items: center;/*子物件垂直對齊：中間*/
+	flex-wrap: wrap;/*溢位項目：自動換行*/
+	/*justify-content: space-evenly;/*物件水平對齊：分散*/
+	flex-direction: row;/*物件順序：由左至右*/
+	height: calc(auto + 15px);
 }
 
 button {
@@ -199,8 +216,22 @@ button {
 	text-decoration: line-through;
 }
 
+
+/*排版*/
+
+
+
+
+
+
 .x_center {/*水平置中*/
-	justify-content: center;
+	display: flex;
+	justify-content: center;/*物件水平對齊：置中*/
+	align-content: space-around;/*垂直對齊：分散*/
+	align-items: center;/*子物件垂直對齊：中間*/
+	flex-wrap: wrap;/*溢位項目：自動換行*/
+	/*justify-content: space-evenly;/*物件水平對齊：分散*/
+	flex-direction: row;/*物件順序：由左至右*/
 }
 
 .y_center {/*垂直置中*/
