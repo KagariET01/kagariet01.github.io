@@ -22,7 +22,7 @@ body::after {
 
 /*box*/
 .box_padding{
-	padding: (calc(var(--shadow_l) + var(--shadow_padding_add)));
+	padding: calc(var(--shadow_l) + var(--shadow_padding_add));
 }
 .box_border {
 	border-style: solid;
