@@ -38,6 +38,16 @@
 	var dcHTML=stoHTML(dcstxt);
 	dcHTML.querySelector('#title').href = "/blog/?p="+URL_p;
 
+	try{
+		post_Tag=stoJSON(nwHTML.querySelector("#jsonData").innerHTML);
+		//console.log(post_Tag);
+		//console.log(typeof(post_Tag));
+		if(post_Tag["hide"] && URLtag.get("showhide")!=1){
+			dcHTML.style.display=null;
+		}
+	}catch(error){
+		post_Tag=null;
+	}
 
 	document.getElementById('docs').innerHTML = dcHTML.innerHTML;
 	
