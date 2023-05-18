@@ -22,7 +22,7 @@ body::after {
 
 /*box*/
 .box_padding{
-	padding: var(calc(--shadow_l + --shadow_padding_add));
+	padding: (calc(var(--shadow_l) + var(--shadow_padding_add)));
 }
 .box_border {
 	border-style: solid;
@@ -43,7 +43,7 @@ body::after {
 	border-radius:6px;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	/*text-align: center;*/
-	padding: var(calc(--shadow_l + --shadow_padding_add));
+	padding: (calc(var(--shadow_l) + var(--shadow_padding_add)));
 	box-shadow: inset 0em 0em var(--shadow_l) 5px var(--box_color);
 	color: #fff;
 	text-align: center;
@@ -168,22 +168,22 @@ a{
 
 a:link {
 	text-decoration: none;
-	color: #fff;
+	color: #0ff;
 }
 
 a:visited {
 	text-decoration: none;
-	color: #fff;
+	color: #0ff;
 }
 
 a:hover {
 	text-decoration: none;
-	color: #fff;
+	color: #0ff;
 }
 
 a:active {
 	text-decoration: none;
-	color: #fff;
+	color: #0ff;
 }
 
 #link {
@@ -216,10 +216,12 @@ button {
 #a_del_line {
 	text-decoration: line-through;
 }
+.txt_center{
+	text-align: center;
+}
 
 
 /*排版*/
-
 
 
 
