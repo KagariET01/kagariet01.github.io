@@ -10,7 +10,7 @@
 }
 
 body::after {
-	content: "ET01";
+	content: "made by ET01 var:2.0";
 	display: block;
 	text-align: center;
 	left: 0;
