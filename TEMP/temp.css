@@ -2,6 +2,7 @@
 	--box_color: #0ff;
 	--box2_color:#888;
 	--shadow_l: 15px;
+	--shadow_padding_add:10px;
 }
 
 #Header {
@@ -21,7 +22,7 @@ body::after {
 
 /*box*/
 .box_padding{
-	padding: var(--shadow_l);
+	padding: var(calc(--shadow_l + --shadow_padding_add));
 }
 .box_border {
 	border-style: solid;
@@ -42,7 +43,7 @@ body::after {
 	border-radius:6px;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	/*text-align: center;*/
-	padding: var(--shadow_l);
+	padding: var(calc(--shadow_l + --shadow_padding_add));
 	box-shadow: inset 0em 0em var(--shadow_l) 5px var(--box_color);
 	color: #fff;
 	text-align: center;
