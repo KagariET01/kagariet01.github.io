@@ -36,10 +36,10 @@
 
 	var dcstxt=catcher(postURL);
 	var dcHTML=stoHTML(dcstxt);
-	dcHTML.querySelector('#title').href = "/blog/?p="+URL_p;
+	dcHTML.querySelector('#title').href = "/blog/?p="+URL_p;//對標題上連結
 
 	try{
-		post_Tag=stoJSON(nwHTML.querySelector("#jsonData").innerHTML);
+		post_Tag=stoJSON(dcHTML.querySelector("#jsonData").innerHTML);
 		//console.log(post_Tag);
 		//console.log(typeof(post_Tag));
 		if(post_Tag["hide"] && URLtag.get("showhide")!=1){
