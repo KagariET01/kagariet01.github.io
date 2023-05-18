@@ -1,3 +1,8 @@
+:root{
+	--box_color: #0ff;
+	--box2_color:#888;
+}
+
 #Header {
 	width: 90%;
 	margin: 0 auto;
@@ -17,14 +22,14 @@ body::after {
 #box_border {
 	border-style: solid;
   border-width: 4px;
-	border-color: #0ff;
+	border-color: var(--box_color);
 	
 	background-color:#0000;
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	box-sizing: border-box;
 	border-radius:10px;
 
-	box-shadow: 0 0 15px 5px #0ff;
+	box-shadow: 0 0 15px 5px var(--box_color);
 }
 
 #box {
@@ -33,30 +38,27 @@ body::after {
 	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	/*text-align: center;*/
 	padding: 15px;
-	box-shadow: inset 0em 0em 15px 5px #0ff;
+	box-shadow: inset 0em 0em 15px 5px var(--box_color);
 	color: #fff;
 }
 /*box2*/
 #box2_border {
 	border-style: solid;
   border-width: 4px;
-	border-color: #888;
+	border-color: var(--box_color);
 	
 	background-color:#0000;
-	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
 	box-sizing: border-box;
 	border-radius:10px;
 
-	box-shadow: 0 0 15px 5px #888;
+	box-shadow: 0 0 15px 5px var(--box_color);
 }
 
 #box2 {
 	background-color: #0008;
 	border-radius:6px;
-	/*clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 1em, 100% 100%, 1em 100%, 0 calc(100% - 1em));*/
-	/*text-align: center;*/
 	padding: 15px;
-	box-shadow: inset 0em 0em 15px 5px #888;
+	box-shadow: inset 0em 0em 15px 5px var(--box_color);
 	color: #fff;
 }
 /*
