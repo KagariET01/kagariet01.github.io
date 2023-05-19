@@ -1,4 +1,14 @@
 {//get URL tag and load blog
+	
+
+	
+function stoJSON(str){
+
+	var re=JSON.parse(str);	return re;
+
+}
+
+
 	const thisURL=window.location.search;//獲取目前的網址(就是把網址列一字不漏地複製到thisURL)
 	const thisURLtagtxt=thisURL;//將網址複製到thisURLtagtxt
 	console.log(thisURLtagtxt);//解析網址，並把結果放到thisURLtagtxt
