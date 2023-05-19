@@ -47,20 +47,20 @@ function stoJSON(str){
 	var dcstxt=catcher(postURL);
 	var dcHTML=stoHTML(dcstxt);
 	dcHTML.querySelector('#title').href = "/blog/?p="+URL_p;//對標題上連結
-
+  var showdoc=true;
 	try{
 		post_Tag=stoJSON(dcHTML.querySelector("#jsonData").innerHTML);
 		//console.log(post_Tag);
 		//console.log(typeof(post_Tag));
 		if(post_Tag["hide"] && URLtag.get("showhide")!=1){
-			dcHTML.style.display=null;
+			showdoc= false
 		}
 	}catch(error){
 		post_Tag=null;
 	}
-
-	document.getElementById('docs').innerHTML = dcHTML.innerHTML;
-	
+  if(showdoc){
+	document.getElementById('docs').innerHTML =dcHTML.innerHTML;
+	}
 
 	/*	
 	var reader=new FileReader();
