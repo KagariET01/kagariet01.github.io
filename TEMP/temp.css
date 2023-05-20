@@ -213,7 +213,7 @@ button {
 }
 
 /*文字相關*/
-#a_del_line {
+.a_del_line {
 	text-decoration: line-through;
 }
 .txt_center{
