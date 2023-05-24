@@ -1,4 +1,14 @@
 {//get URL tag and load blog
+	
+
+	
+function stoJSON(str){
+
+	var re=JSON.parse(str);	return re;
+
+}
+
+
 	const thisURL=window.location.search;//獲取目前的網址(就是把網址列一字不漏地複製到thisURL)
 	const thisURLtagtxt=thisURL;//將網址複製到thisURLtagtxt
 	console.log(thisURLtagtxt);//解析網址，並把結果放到thisURLtagtxt
@@ -7,7 +17,7 @@
 	if(URL_p==null){
 		URL_p="null";
 	}
-	const postURL='https://kagariet01.github.io/blog/docs/'+URL_p+"/post.html";//postURL為要讀取的文章的檔案路徑
+	const postURL='/blog/docs/'+URL_p+"/post.html";//postURL為要讀取的文章的檔案路徑
 	//const postURL='./docs/'+URL_p+"/post.html";//postURL為要讀取的文章的檔案路徑
 	
 	//document.getElementById('docs').innerHTML = postURL;
@@ -36,11 +46,21 @@
 
 	var dcstxt=catcher(postURL);
 	var dcHTML=stoHTML(dcstxt);
-	dcHTML.querySelector('#title').href = "https://kagariet01.github.io/blog/?p="+URL_p;
-
-
-	document.getElementById('docs').innerHTML = dcHTML.innerHTML;
-	
+	dcHTML.querySelector('#title').href = "/blog/?p="+URL_p;//對標題上連結
+  var showdoc=true;
+	try{
+		post_Tag=stoJSON(dcHTML.querySelector("#jsonData").innerHTML);
+		//console.log(post_Tag);
+		//console.log(typeof(post_Tag));
+		if(post_Tag["hide"] && URLtag.get("showhide")!=1){
+			showdoc= false
+		}
+	}catch(error){
+		post_Tag=null;
+	}
+  if(showdoc){
+	document.getElementById('docs').innerHTML =dcHTML.innerHTML;
+	}
 
 	/*	
 	var reader=new FileReader();
