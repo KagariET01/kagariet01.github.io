@@ -7,3 +7,12 @@
 			text => document.getElementById('top').innerHTML = text
 		);
 }
+
+var nwsty=0;
+var stylst=["/TEMP/temp.css","/TEMP/temp_bright.css"];
+
+function switch_sty(){
+	nwsty++;
+	nwsty%=stylst.length;
+	document.getElementById("style_css").setAttribute("href",stylst[nwsty]);
+}
