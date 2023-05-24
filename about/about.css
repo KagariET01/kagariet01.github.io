@@ -1,16 +1,16 @@
 
-#finish{
+.finish{
 	color:#8f8;
 }
-#runing{
+.runing{
 	color:#fc8;
 }
-#pause{
+.pause{
 	color:#f80;
 }
-#no{
+.no{
 	color:#f00;
 }
-#unknow{
+.unknow{
 	color: #888;
 }
