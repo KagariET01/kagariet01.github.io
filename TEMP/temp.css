@@ -240,3 +240,18 @@ button {
 .y_center {/*垂直置中*/
 	align-content: center;
 }
+
+/*for blog*/
+#minitxt{
+	color:#888;
+	font-size: 18px;
+}
+#ET01{
+	color:#f00;
+}
+#time{
+	color:#ccc;
+}
+#del_line{
+	text-decoration: line-through;
+}
