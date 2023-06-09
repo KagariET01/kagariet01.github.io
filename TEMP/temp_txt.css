@@ -1,0 +1,15 @@
+.t_overline{
+    text-decoration:overline;
+}
+.t_underline{
+    text-decoration:underline;
+}
+.t_delline{
+    text-decoration:line-through;
+}
+.t_fat{
+    font-weight:bold;
+}
+.t_move{
+    font-style:italic;
+}
