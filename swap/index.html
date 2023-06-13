@@ -1,0 +1,31 @@
+<script>
+{//get URL tag and load blog	
+    function stoJSON(str){
+        var re=JSON.parse(str);	return re;
+    }
+
+    const thisURL=window.location.search;//獲取目前的網址(就是把網址列一字不漏地複製到thisURL)
+    const URLtag=new URLSearchParams(thisURL);//URLSearchParams：獲取參數(就是網址?後面的東西)
+    const URL_OJ=URLtag.get('OJ');//獲取文章編號
+    const QID=URLtag.get('PID');
+    if(URL_OJ=="zj"){
+        window.location.href = "https://zerojudge.tw/ShowProblem?problemid="+QID;
+    }else if(URL_OJ=="neoj"){
+        window.location.href="https://neoj.sprout.tw/problem/"+QID;
+    }else if(URL_OJ=="tioj"){
+        window.location.href="https://tioj.ck.tp.edu.tw/problems/"+QID;
+    }else if(URL_OJ=="tcirc"){
+        window.location.href="https://judge.tcirc.tw/ShowProblem?problemid="+QID;
+    }else if(URL_OJ=="cf"){
+        const CID=URLtag.get('CID');
+        window.location.href="https://codeforces.com/problemset/problem/"+CID+"/"+QID;
+    }
+}
+</script>
+here's nothing
+<!--
+ZJ ex: https://kagariet01.github.io/swap/?OJ=zj&PID=a001
+CF ex: https://kagariet01.github.io/swap/?OJ=cf&CID=1&PID=A
+
+
+-->
