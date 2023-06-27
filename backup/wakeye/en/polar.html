@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="icon" href="/electric.png" type="image/x-icon"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>電神養成計畫</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="header">
+  	  <h1>Chapter 4. The missing entrance</h1>
+      <h2>polar coordinates</h2>
+      <h3>
+      <details><summary>Story</summary>
+      <br>"60 seconds have passed, Tiantian-"
+      <br>After the contest was over, you turned around.
+      <br>Nobody was at where Tiantian was standing,
+      <br>and the cave seems to only have you and Wakeye left.
+      <br>Wakeye suggested: "Let's get out of this place,
+      <br>this isnt a 
+      <br>偉凱建議：「我們先離開好了，這裡不是什麼好地方，
+      <br>天天都被這裡搞成這樣子了。」
+      <br>當你們沿著去路回洞口時，發現洞口也離奇消失了。
+      <br>你開始緊張，但是你注意到了不應該存在的穴壁上刻了幾個符號。
+      <br><img src="https://cdn.discordapp.com/attachments/760358052536123393/819401437481402368/PXL_20210311_024720034.jpg" height="200" width="300">
+      <br>「這樣吧，我們......」偉凱在你的耳朵旁邊說道。
+      <br>你聽了偉凱的計劃之後，大約對於這些符號的意義有點了頭緒
+      <br>你低頭看了地面，佈滿著網格狀的刻紋，你覺得你可以成功逃離洞窟。      </details></h3>
+    </div>
+    <div class="main">
+    	如果x,y非整數，則它們的上下高斯都算是正確答案<br>
+    	<b>請輸入整數。</b>
+			<h1 id="oparea">owo</h1>
+		  <h2 id="result"></h2>
+			<h2 id="solution"></h2>
+			<h3 id="times"></h3>
+      x坐標<input type="number" id="x" class="inputnumber" style="width:45px;"> y坐標<input type="number" id="y" class="inputnumber" style="width:45px;"><br>
+      <br><br>
+      <input type="button" class="bruh" value="送出" onclick="ans()">
+			<input type="button" class="bruh" value="start" onclick="starts()">
+			<h3 style="color:MediumSeaGreen" id="cor"></h3>
+			<h3 style="color:Tomato" id="inc"></h3>
+			<h3 style="color:Black" id="una"></h3>
+      <script>
+      	var flag=1,bruh=0,c=0,w=0,u=0,avgt=0,i,aaaaa=0,d,angle,x,y,ansx,ansy,begin,end;
+        function count(){
+        	if(c+w>0)
+        	  aaaaa=avgt/(c+w);
+        	document.getElementById("cor").innerHTML="正確題數："+c;
+			    document.getElementById("inc").innerHTML="錯誤題數："+w;
+			    document.getElementById("una").innerHTML="未答題數："+u+"<br>答對率："+(c*100/(c+w)).toFixed(2)+"%<br>平均時間："+(aaaaa/1000).toFixed(3)+"s";
+        }
+        function starts(){
+        	flag=0;
+        	if(bruh==1)
+        	  u++;
+        	bruh=1;
+        	count();
+        	begin=new Date().getTime();
+        	document.getElementById("x").value="";
+        	document.getElementById("y").value="";
+        	i=-1;
+        	if(Math.random()>0.5)
+        	  i=1;
+        	angle=parseInt(Math.random()*360);
+        	d=(parseInt(Math.random()*70))%50+1;
+        	document.getElementById("oparea").innerHTML="["+d+","+angle+"°]=(?,?)<br>";
+        	document.getElementById("result").innerHTML="";
+					document.getElementById("solution").innerHTML="";
+					document.getElementById("times").innerHTML="";
+					
+        }
+        function ans(){
+        	ansx=d*Math.cos(Math.PI *angle/180);
+        	ansy=d*Math.sin(Math.PI*angle/180);
+        	x=parseInt(document.getElementById("x").value);
+        	y=parseInt(document.getElementById("y").value);
+					if(isNaN(x))
+						x=0;
+					if(isNaN(y))
+						y=0;
+          if(flag){
+          	document.getElementById("oparea").innerHTML="請先按start！"
+          }
+        	else if(bruh){
+        		bruh=0;
+	        	end=new Date().getTime();
+	        	if((Math.floor(ansx)==x||Math.ceil(ansx)==x)&&(Math.floor(ansy)==y||Math.ceil(ansy)==y)){
+	        		document.getElementById("result").innerHTML="<p style=\"color:MediumSeaGreen;\">correct</p>";
+	        		c++;
+	        	}
+	        	else{
+	    	  		document.getElementById("result").innerHTML="<p style=\"color:Tomato;\">wrong</p>";
+	    				w++;
+	        	}
+	        	document.getElementById("solution").innerHTML="your answer: "+x+", "+y+"<br>correct answer: "+ansx.toFixed(1)+", "+ansy.toFixed(1);
+						document.getElementById("times").innerHTML="花費時間： "+(parseInt(end)-parseInt(begin))/1000.0+" 秒";
+						avgt+=parseInt(end)-parseInt(begin);
+      			count();
+        	}
+      	}
+      </script>
+    </div>
+    <a class="home_button" href="home.html" >回首頁</a><br>
+      <a class="home_button" href="https://tiantian.guaichi.repl.co/" >第三節、出其不意的挑戰書</a>
+      <a class="home_button" href="https://tiantian.guaichi.repl.co/polar/" >第四節幕間、逃離光輝洞窟</a><br>
+      <br><br><br><br><br><br><br>
+    <div class="footer">
+      <big><i>website by Ststone 925</i></big>
+    </div>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <div id="page_top"><a href="#"></a></div>
+  </body>
+</html>
