@@ -1,0 +1,122 @@
+body{
+  text-align: center;
+  background-color: #6798c0;
+  color: #ffffff;
+}
+.sign{
+  padding: 30px;
+  text-align: right;
+  background: rgb(253, 216, 93);
+  color: black;
+}
+.header{
+  padding: 30px;
+  text-align: center;
+  background: rgb(253, 216, 93);
+  color: black;
+}
+.bruh{
+  font-size: 20px;
+  width: 120px;
+  background: #c8ecb3;
+  border: 1px;
+  border-radius:100px;
+  border-color: black;
+}
+
+.score_button{
+  font-size: 20px;
+  width: 120px;
+  background: #c8ecb3;
+  border: none;
+  z-index: 1;
+}
+
+.footer{
+  padding: 20px;
+  text-align: center;
+  background: #99d6ea;
+  color: white;
+}
+
+.main{
+  -ms-flex: 80%;
+  flex: 80%;
+  background-color: 90ACB4;
+  padding: 20px;
+  color: #fbf7f7;
+  text-align: center;
+}
+
+.test_page{
+  background-color: rgb(255, 253, 247);
+  padding: 20px;
+  color: black;
+}
+
+.home_button{
+  background-color: #3b6a91;
+  border:none;
+  color: white;
+  padding:15px 32px;
+  margin: 5px 5px 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#page_top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #c7f0ff;
+  opacity: 0.6;
+}
+
+#page_top a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+
+#page_top a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: #9e2222;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+.home_header{
+  padding: 30px;
+  text-align: center;
+  background-image: url("https://cdn.discordapp.com/attachments/713379026487476235/818523690961993738/Haachama.gif");
+  color: black;
+  background-size: 170px 170px;
+}
+.shit{
+	text-align:right;
+	float:left;
+	width:40%;
+}
+.shits{
+	text-align:left;
+	float:left;
+	width:40%;
+}
+.inputnumber{
+	width:30px;
+}
