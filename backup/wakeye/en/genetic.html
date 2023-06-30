@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+  	<link rel="icon" href="electric.png" type="image/x-icon"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>電神養成計畫</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="header">
+  	  <h1>第五節、</h1>
+      <h2><br></h2>
+      <h3><br><br>
+      <details>
+      	<summary>劇情</summary>
+
+      </details></h3>
+    </div>
+    <div class="test_page">
+			<h3>給定一串DNA,請把從序列的開始(包含)直到終止密碼子(不包含)的遺傳密碼轉錄成RNA。</h3>
+			<h4>起始密碼子：AUG；終止密碼子：UAA,UAG,UGA</h4>
+			基因長度 <input style="width:50px;" type="number" value="40" min="10" max="1000" onkeyup="leng=parseInt(this.value);">
+			<br>每 <input id="liness" style="width:50px;" type="number" value="10" min="10" max="50" onkeyup="display();">個字母一行
+			<h1><center><p id="oparea">owo</p></h1></center>
+			<h2><a class="cor" id="correct"></a><a class="inc" id="incorrect"></a></h2>
+			<p id="solution"></p>
+			<h3><p id="times"></p></h3>
+			<textarea placeholder="RNA" type="text" id="ans"></textarea><br><br>
+			<input type="button" class="bruh" value="start" onclick="starts()"><br>
+			<h3 style="color:MediumSeaGreen" id="cor"></h3>
+			<h3 style="color:Tomato" id="inc"></h3>
+			<h3 style="color:Black" id="una"></h3>
+      <script>
+				var dna,op,i,cflag,spos,epos,leng=40,lines=10,anss,rna,correct=0,incorrect=0,unanswered=-1,ansflag=0;
+				var code=["A","T","C","G"];
+				var ends=["ATT","ATC","ACT"];
+				function ans(){
+					rna=document.getElementById("ans").value;
+					anss="";
+					for(i=spos;i<epos;i++){
+						if(dna.substr(i,1)=="A")
+					    ans+="U";
+					  else if(dna.substr(i,1)=="T")
+						  ans+="A";
+						else if(dna.substr(i,1)=="C")
+						  ans+="G"
+						else if(dna.substr(i,1)=="G")
+						  ans+="C";
+					}
+				  if(anss==rna){
+				  	document.getElementById("solution")+="Answer:<br>";
+				  	for(i=0;i<leng;i++){
+							if(i%lines==0){
+								document.getElementById("solution").innerHTML+="<br>";
+							}
+							document.getElementById("solution").innerHTML+=anss.substr(i,1);
+						}
+						correct++;
+				  }
+				  else{
+				  	document.getElementById("solution")+="Answer:<br>";
+				  	for(i=0;i<leng;i++){
+				  		if(rna.length()>=i||anss.substr(i,1)==rna.substr(i,1)){
+								if(i%lines==0){
+									document.getElementById("solution").innerHTML+="<br>";
+								}
+								document.getElementById("solution").innerHTML+="<a id='inc'>"+anss.substr(i,1)+"</a>";
+				  		}
+				  		else{
+				  			if(i%lines==0){
+									document.getElementById("solution").innerHTML+="<br>";
+								}
+								document.getElementById("solution").innerHTML+=anss.substr(i,1);
+				  		}
+						}
+						incorrect++;
+				  }
+				  show();
+				  flag=1;
+				}
+				function starts(){
+					if(ansflag==0)
+						unanswered++;
+					show();
+					ansflag=0;
+					document.getElementById("oparea").innerHTML="";
+					dna="";
+					for(i=0;i<leng;i++){
+						dna+=code[parseInt(Math.random()*4)];
+					}
+					while(dna.length()!=leng){
+						checks();
+						addse();
+					}
+					display();
+					display();
+				}
+				function show(){
+					document.getElementById("cor").innerHTML="正確題數："+correct;
+					document.getElementById("inc").innerHTML="錯誤題數："+incorrect;
+					document.getElementById("una").innerHTML="未答題數："+unanswered;
+				}
+				function checks(){
+					cflag=0;
+					var sub;
+					for(i=0;i<leng-3;i++){
+						sub=dna.substr(i,3);
+						if((sub=="TAC"&&spos!=i)||((sub=="ATT"||sub=="ATC"||sub=="ACT")&&epos!=i)){
+							cflag=1;
+							dna=dna.substr(0,i)+"TAC"+dna.substr(i+1,leng-1);
+						}
+					}
+				}
+				function addse(){
+					spos=parseInt(Math.random()*(leng-5)-parseInt(Math.random()*(leng-5)/2));
+					dna=dna.substr(0,spos)+"TAC"+dna.substr(spos+3,leng-1);
+					epos=spos+parseInt(((Math.random()*(leng-spos)))/3*3);
+					dna=dna.substr(0,epos)+ends[parseInt(Math.random()*3)]+dna.substr(epos+3,leng-1);
+				}
+				function display(){
+					op="";
+					lines=parseInt(document.getElementById("liness").value);
+					document.getElementById("oparea").innerHTML="";
+					for(i=0;i<leng;i++){
+						if(i%lines==0){
+							op+="<br>";
+						}
+						op+=dna.substr(i,1);
+					}
+				}
+      </script>
+      <a class="home_button" href="home.html" >回首頁</a><br>
+      <a class="home_button" href="https://tiantian.guaichi.repl.co/polar/">第四節幕間、逃離光輝洞窟</a>
+      <a class="home_button" href="#XD" >第六節、？？？？？？？？</a><br>
+      <br><br><br><br><br><br><br>
+    </div>
+    <div class="footer">
+      <big><i>website by Ststone 925</i></big>
+    </div>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <div id="page_top"><a href="#"></a></div>
+  </body>
+</html>

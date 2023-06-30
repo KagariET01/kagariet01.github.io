@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="icon" href="electric.png" type="image/x-icon"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>電神養成計畫</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="header">
+  	  <h1>第一節、三角魔人的初試煉</h1>
+      <h2>角度代換<br>trigonometry</h2>
+      <h3>「天天天天電學長。」—天天<br><br>
+      <details>
+      	<summary>劇情</summary>
+      	「所以，你有什麼可以打敗光輝魔獸的武器嗎？」你問偉凱。<br>「我只有這個祖傳87代的寶劍，看起來非常鋒利，
+      <br>但是無論我怎麼用力揮都無法弄斷任何物品。」
+      <br>「你有帶吧，借我看一下。」「好的。」
+      <br>「這是......六大勇者的刻字。偉凱，你知道六大勇者嗎？」
+      <br>「蛤？？你說發明《三角攻擊原理》的六大勇者？
+      <br>他們的寶劍不是已失傳千年了？」偉凱開始翻書。
+      <br>「關於寶劍的敘述......FT=1，F為揮劍的力道，T則是......」
+      <br>「三餃定數。」你打斷偉凱。
+      <br>「並不是所有物體都使用定數，好像只有多邊形才適用，其實我並不清楚。」
+      <br>「這就解釋我為什麼沒辦法使用劍了，我拿它來切菜......」 
+      <br>「不多說了，我們先練習吧。我相信我們可以找到最有效的力道。」
+      </details></h3>
+    </div>
+    <div class="test_page">
+    	<div>
+      	<div class="shit">cot,sec,csc頻率<br>
+      		<input id="high" type="radio" name="xd" checked onclick="aprate=6">高
+          <input id="low" type="radio" name="xd" onclick="aprate=9">低
+          <input id="none" type="radio" name="xd" onclick="aprate=3">無&nbsp;
+    	  </div>
+    	  <div style="float:left;width:20%"><br></div>
+        <div class="shits">
+        	<input id=75 type="checkbox" checked>
+      	  出現15,75°<br>
+      	  <input id=30 type="checkbox" checked>
+      	  出現30,45,60°<br>
+      	  <input id=90 type="checkbox" checked>
+      	  出現0,90°
+    	  </div>
+    	</div>
+			<h1><center><p id="oparea">owo</p></h1></center>
+			<p id="solution"></p>
+			<h3><p id="times"></p></h3>
+			<h3 display:inline><input type="checkbox" id=-1 >負 &emsp;&emsp;
+			<input type="button" class="bruh" value="無意義" onclick="ans(this.id)" id=0></h3>
+			<input type="button" class="bruh" value="0" onclick="ans(this.id)" id=1>
+			<input type="button" class="bruh" value="1" onclick="ans(this.id)" id=2>
+			<input type="button" class="bruh" value="2" onclick="ans(this.id)" id=3>
+			<input type="button" class="bruh" value="1/2" onclick="ans(this.id)" id=4>
+			<br>
+			<input type="button" class="bruh" value="√2" onclick="ans(this.id)" id=5>
+			<input type="button" class="bruh" value="√3" onclick="ans(this.id)" id=6>
+			<input type="button" class="bruh" value="√2/2" onclick="ans(this.id)" id=7>
+			<input type="button" class="bruh" value="√3/3" onclick="ans(this.id)" id=8>
+			<br>
+			<input type="button" class="bruh" value="√3/2" onclick="ans(this.id)" id=9>
+			<input type="button" class="bruh" value="2√3/3" onclick="ans(this.id)" id=10>
+			<input type="button" class="bruh" value="2+√3" onclick="ans(this.id)" id=11>
+			<input type="button" class="bruh" value="2-√3" onclick="ans(this.id)" id=12>
+			<br>
+			<input type="button" class="bruh" value="√6+√2" onclick="ans(this.id)" id=13>
+			<input type="button" class="bruh" value="√6-√2" onclick="ans(this.id)" id=14>
+			<input type="button" class="bruh" value="(√6+√2)/4" onclick="ans(this.id)" id=15>
+			<input type="button" class="bruh" value="(√6-√2)/4" onclick="ans(this.id)" id=16>
+			<br><br>
+			<input type="button" class="bruh" value="start" onclick="starts()">
+			<h3 style="color:MediumSeaGreen" id="cor"></h3>
+			<h3 style="color:Tomato" id="inc"></h3>
+			<h3 style="color:Black" id="una"></h3>
+      <script>
+        var aprate=6,k,str,nv,n,i,nflag,flag,bruh=1,begin,end,c,w,u,per,avgt=0,aaaaa=0,cflag;
+        c=w=u=0;
+        u=-1;
+        var fun=['sin','cos','tan','cot','sec','csc'];
+        var val=[0,15,30,45,60,75,90,105,120,135,150,165,180,195,210,225,240,255,270,285,300,315,330,345];
+        var sols=["無意義","0","1","2","1/2","√2","√3","√2/2","√3/3","√3/2","2√3/3","2+√3","2-√3","√6+√2","√6-√2","(√6+√2)/4","(√6-√2)/4"];
+        var sol=[[1,16,4,7,9,15,2,15,9,7,4,16,1,-16,-4,-7,-9,-15,-2,-15,-9,-7,-4,-16,-1],
+        					[2,15,9,7,4,16,1,-16,-4,-7,-9,-15,-2,-15,-9,-7,-4,-16,1,16,4,7,9,15],
+        					[1,12,8,2,6,11,0,-11,-6,-2,-8,-12,1,12,8,2,6,11,0,-11,-6,-2,-8,-12],
+        					[0,11,6,2,8,12,1,-12,-8,-2,-6,-11,0,11,6,2,8,12,1,-12,-8,-2,-6,-11],
+        					[2,14,10,5,3,13,0,-13,-3,-5,-10,-14,-2,-14,-10,-5,-3,-13,0,13,3,5,10,14],
+        					[0,13,3,5,10,14,2,14,10,5,3,13,0,-13,-3,-5,-10,-14,-2,-14,-10,-5,-3,-13]];
+        function ans(id){
+          flag="";
+          var ans=id;
+          if(typeof(k)==="undefined")
+            document.getElementById("solution").innerHTML="<h1>請先按start!</h1>";
+          else if(bruh&&cflag!=2){
+            if(document.getElementById(-1).checked&&ans!=1){
+              flag="-";
+              ans*=-1;
+            }
+            if((k==0||k==5)&&((i+3600)%360)>180){
+              flag="-";
+              ans*=-1;
+            }
+            else if((k==1||k==4)&&(((i+3600)%360)<270||(i+3600)%360)>90){
+              flag="-";
+              ans*=-1;
+            }
+            else if((k==2||k==3)&&((((i+3600)%360)<180&&((i+3600)%360)>90)||((i+3600)%360)>270)){
+              flag="-";
+              ans*=-1;
+            }
+            if(ans==sol[k][n]){
+              correct();
+            }
+            else wrong();
+            bruh=0;
+            end=new Date().getTime();
+            document.getElementById("times").innerHTML="花費時間： "+(parseInt(end)-parseInt(begin))/1000.0+" 秒";
+            avgt+=(parseInt(end)-parseInt(begin))/1000.0;
+            count();
+          }
+        }
+        function count(){
+        	if(c+w>0)
+        	  aaaaa=avgt/(c+w);
+        	document.getElementById("cor").innerHTML="正確題數："+c;
+			    document.getElementById("inc").innerHTML="錯誤題數："+w;
+			    document.getElementById("una").innerHTML="未答題數："+u+"<br>答對率："+(c*100/(c+w)).toFixed(2)+"%<br>平均時間："+aaaaa.toFixed(3)+"s";
+        }
+        function starts(){
+        	document.getElementById(-1).checked=0;
+          begin=new Date().getTime();
+          bruh=1;
+          k=Math.floor(Math.random()*aprate)%6;
+          n=Math.floor(Math.random()*24);
+					cflag=0;
+					while(!cflag){
+						checks();
+					}
+					if(cflag==1){
+						if(bruh){
+							u++;
+							count();
+						}
+						if(Math.random()>0.5)
+							nflag=-1;
+						else nflag=1;
+						i=nflag*360*Math.floor(20*(1-((Math.random())**(1/12)))-1);
+						document.getElementById("oparea").innerHTML=fun[k]+"("+(val[n]+i)+"°)=?<br>";
+						document.getElementById("solution").innerHTML="";
+						document.getElementById("times").innerHTML="";
+					}
+        }
+        function checks(){
+					cflag=1;
+					if(!(document.getElementById(75).checked||document.getElementById(30).checked||document.getElementById(90).checked)){
+						document.getElementById("oparea").innerHTML="好笑嗎???????";
+						cflag=2;
+					}
+					else{
+    	    	if(!document.getElementById(75).checked){
+							if(n%6==1||n%6==5){
+								while(n%6==1||n%6==5){
+									n=Math.floor(Math.random()*24);
+								}
+								checks();
+								cflag=0;
+							}
+						}
+						if(!document.getElementById(30).checked){
+							if(n%6==2||n%6==3||n%6==4){
+								while(n%6==2||n%6==3||n%6==4){
+									n=Math.floor(Math.random()*24);
+								}
+								checks();
+								cflag=0;
+							}
+						}
+						if(!document.getElementById(90).checked){
+							if(n%6==0){
+								while(n%6==0){
+									n=Math.floor(Math.random()*24);
+								}
+								checks();
+								cflag=0;
+							}
+						}
+					}
+        }
+        function correct(){
+        	c++;
+          document.getElementById("solution").innerHTML="<h1 style="+"color:MediumSeaGreen;"+">correct"+"</h1><h1>answer is "+((sol[k][n]<0)?"-":"")+"("+sols[Math.abs(sol[k][n])]+")"+"</h1>";
+        }
+        function wrong(){
+        	w++;
+          document.getElementById("solution").innerHTML="<h1 style="+"color:Tomato;"+">wrong"+"</h1><h1>answer is "+((sol[k][n]<0)?"-":"")+"("+sols[Math.abs(sol[k][n])]+")"+"</h1>";
+        }
+      </script>
+      <a class="home_button" href="home.html" >回首頁</a><br>
+      <a class="home_button" href="index.html" >第零節、開始總是出乎意料</a>
+      <a class="home_button" href=" 20challenge.html" >第二節、擊潰的意義與希望</a><br>
+      <br><br><br><br><br><br><br>
+    </div>
+    <div class="footer">
+      <big><i>website by Ststone 925</i></big>
+    </div>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <div id="page_top"><a href="#"></a></div>
+  </body>
+</html>

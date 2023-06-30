@@ -1,0 +1,382 @@
+html{
+	background-color:#6798c0;
+	font-size:1em;
+}
+h1{
+  margin: 0;
+}
+h2{
+  margin: 0;
+}
+.title{
+  text-align:center;
+}
+button{
+  width: 120px;
+  background: #c8ecb3;
+  border: 10px;
+  border-radius:50px;
+  border-color: black;
+	cursor: pointer;
+}
+.disable_button{
+    background:#888;
+    width: 120px;
+  background: #c8ecb3;
+  border: 10px;
+  border-radius:50px;
+  border-color: black;
+	cursor: pointer;
+
+}
+.dropbtn{
+	width:50px;
+	border-radius:50%;
+  background-color:#00A2E8;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+	cursor: pointer;
+	border: 1px;
+	border-color: black;
+}
+.dropdown-content a{
+  color: black;
+  padding: 6px 10px;
+  text-decoration: none;
+  display: block;
+}
+.show{
+	display:block;
+}
+.bobux{
+	visibility:hidden;
+	height:0px;
+}
+.bg{
+	position:relative;
+	margin:auto;
+}
+.ull{
+  position: absolute;
+  top: 20px;
+  left: 42px;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.ul{
+  position: absolute;
+  top: 20px;
+  left: 109px;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.uc{
+  position: absolute;
+  top: 20px;
+  left: 175px;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.ur{
+  position: absolute;
+  top: 20px;
+  right: 109px;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.urr{
+  position: absolute;
+  top: 20px;
+  right: 42px;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.dll{
+	background-color: #f1f1f1;
+  position: absolute;
+  bottom: 25px;
+  left: 42px;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.dl{
+	background-color: #f1f1f1;
+  position: absolute;
+  bottom: 25px;
+  left: 109px;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.dc{
+	background-color: #f1f1f1;
+  position: absolute;
+  bottom: 25px;
+  left: 175px;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.dr{
+	background-color: #f1f1f1;
+  position: absolute;
+  bottom: 25px;
+  right: 109px;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.drr{
+	background-color: #f1f1f1;
+  position: absolute;
+  bottom: 25px;
+  right: 42px;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.btn{
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.overlay{
+	width:100%;
+	height:80vh;
+	/*background-color:#1f1e33;
+	opacity:0.4;*/
+}
+.game{
+	opacity:0.5;
+	width:100%;
+	height:100%;
+	z-index:0;
+	left:5%;
+  background-image: url("https://media.discordapp.net/attachments/760358052536123393/878284658981359676/unknown.png?width=1607&height=904");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg{
+	object-fit: fill;
+	width:100%;
+	height:100%;
+	position:relative;
+}
+.tg{
+	width:8%;
+}
+.start{
+	z-index:1;
+}
+.control{
+  width: 100%;
+  text-align: center;
+}
+.things{
+  height: 86%;
+  width: 100%;
+  display: flex;
+}
+.hotpot{
+  height: 14%;
+  width: 100%;
+  display: flex;
+}
+.hotpot_left{
+  width: 46%;
+}
+.chunk{
+  width: 4%;
+}
+.thing_img{
+  width: 100%;
+  height: 6%;
+  display: none;
+}
+.item_space{
+  height: 0%;
+  width: 100%;
+}
+.choose{
+  width:100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+.choose_space{
+  width: 20%;
+}
+.choose_main{
+  width: 60%;
+  text-align: center;
+}
+.choose_main_top{
+  height: 30%;
+  width: 100%;
+}
+.rule_title{
+  color: Red;
+  font-weight:bold;
+}
+.rule{
+  color: yellow;
+  font-weight:bold;
+}
+.start_button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+.send_data{
+  display: none;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 20px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 2px 2px 2px #000000;
+  background: #3071A9;
+  border-radius: 50px;
+  border: 1px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 10px #000000;
+  border: 2px solid #000000;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -16.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #3071A9;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 20px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 2px 2px 2px #000000;
+  background: #3071A9;
+  border-radius: 50px;
+  border: 1px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 10px #000000;
+  border: 2px solid #000000;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background: #6798c0;;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 20px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #3071A9;
+  border: 1px solid #000000;
+  border-radius: 100px;
+  box-shadow: 2px 2px 2px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071A9;
+  border: 1px solid #000000;
+  border-radius: 100px;
+  box-shadow: 2px 2px 2px #000000;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 1px 1px 10px #000000;
+  border: 2px solid #000000;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background:#6798c0;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071A9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #3071A9;
+}
