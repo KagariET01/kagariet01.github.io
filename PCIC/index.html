@@ -14,13 +14,32 @@
 	<header id="top"></header>
 
 	<!--內文here-->
-	<div id="main">
-		<div id="center" style="width:min(875px , 100%)">
+	<div class="x_center">
+		<div id="main" style="width:max(875px , 80%); height:25%;">
 
-			<iframe src="https://discord.com/widget?id=1096411639147933778&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+			<div class="x_center" style="width:100%;">
+				<img src="PCIC_logo.png" style="width: auto;height: auto;">
+			</div>
+			
+			<div style="
+				width:min(875px , 100%);
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				flex-direction: row;
+			">
+
+				<div style="width: max(calc(100% - 350px),500px);">
+					<div id="blog">
+						<!--blog here-->
+					</div>
+				</div>
+				<div style="width:350px;height:500px;">
+					<iframe src="https://discord.com/widget?id=1096411639147933778&amp;theme=dark" allowtransparency="true" frameborder="0" width="350" height="500" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+				</div>
+			</div>
 
 		</div>
-
 	</div>
 
 	<script src="home.js"></script>
