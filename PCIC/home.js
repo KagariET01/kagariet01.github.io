@@ -47,23 +47,25 @@ if (tmp != null) {
 	while (true) {
 		var nwcfg=catcher(preURL + i + "/cfg.json");//get cfg
 		nwcfg=stoJSON(nwcfg);
-		if(nwcfg==null){
+		/*if(nwcfg==null){
 			break;
 		}
-		if(nwcfg["hide"]){
-			if(URLtag.get("showhide")!=1)
-			i++;
-			continue;
-		}
+		if(nwcfg["hide"]==true){
+			if(URLtag.get("showhide")!=1){
+				i++;
+				continue;
+			}
+		}*/
 		var nw=catcher(preURL + i + "/post.html");
 		var nwhtml=stoHTML(nw);//get docs
-		console.log(nw);
-		console.log(nwhtml);
 		tmp.querySelector("#docs").innerHTML = nwhtml.innerHTML;//put docs into temp
 		alldoc=tmp+alldoc;
+		i++;
+
+		console.log(nw);
+		console.log(nwhtml);
 		console.log(tmp);
 		console.log(alldoc);
-		i++;
 		/*
 		var nw = catcher(preURL + i + "/post.html");
 		if (nw != null) {
