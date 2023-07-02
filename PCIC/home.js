@@ -1,6 +1,6 @@
 //cfg
 const preURL="/PCIC/docs/"
-const tmpURL="https://kagariet01.github.io/TEMP/blog_tmp.html"
+const tmpURL="/TEMP/blog_tmp.html"
 
 const thisURL=window.location.search;
 const thisURLtagtxt=thisURL;
