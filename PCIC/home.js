@@ -58,6 +58,7 @@ if (tmp != null) {
 		var nwhtml=catcher(preURL + i + "/post.html");//get docs
 		tmp.querySelector("#docs").innerHTML = nwhtml.innerHTML;//put docs into temp
 		alldoc=tmp+alldoc;
+		i++;
 		/*
 		var nw = catcher(preURL + i + "/post.html");
 		if (nw != null) {
