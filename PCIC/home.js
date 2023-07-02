@@ -1,7 +1,12 @@
+//cfg
+const preURL="/PCIC/docs/"
+const tmpURL="https://kagariet01.github.io/TEMP/blog_tmp.html"
+
 const thisURL=window.location.search;
 const thisURLtagtxt=thisURL;
 const URLtag=new URLSearchParams(thisURLtagtxt)
 console.log("網址tag="+URLtag);
+
 
 
 function catcher(url) {
@@ -19,28 +24,42 @@ function catcher(url) {
 		return null
 	}
 }
+
 function stoHTML(str) {
 	const re = document.createElement('div');//re=建立新html變數，初始標籤為div
 	re.innerHTML = str.trim();//將str放入re裡面(trim為去除空格，系統會自動將字串轉換成html格式)
 	return re;
 }
+
 function stoJSON(str){
 	var re=JSON.parse(str);
 	return re;
 }
 
-
-var tmptxt = catcher("https://kagariet01.github.io/TEMP/blog_tmp.html");
+var tmptxt = catcher(tmpURL);
 var tmp = stoHTML(tmptxt);
 //console.log(tmp);
-var jsonex={"test":"test"};
 
 var alldoc = "";
 
 if (tmp != null) {
 	var i = 1;
 	while (true) {
-		var nw = catcher("https://kagariet01.github.io/PCIC/docs/" + i + "/post.html");
+		var nwcfg=catcher(preURL + i + "/cfg.json");//get cfg
+		nwcfg=stoJSON(nwcfg);
+		if(nwcfg==null){
+			break;
+		}
+		if(nwcfg["hide"]){
+			if(URLtag.get("showhide")!=1)
+			i++;
+			continue;
+		}
+		var nwhtml=catcher(preURL + i + "/post.html");//get docs
+		tmp.querySelector("#docs").innerHTML = nwhtml.innerHTML;//put docs into temp
+		alldoc=tmp+alldoc;
+		/*
+		var nw = catcher(preURL + i + "/post.html");
 		if (nw != null) {
 			var nwHTML=stoHTML(nw);
 			var post_Tag;
@@ -59,7 +78,9 @@ if (tmp != null) {
 			var ad = tmp.innerHTML;
 			alldoc = ad +"<br>"+ alldoc;//將文章插入文章列表裡
 		}else break;
-		i++
+		i++*/
+		
+	
 	}
 }
 
