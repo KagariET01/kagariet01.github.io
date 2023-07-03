@@ -38,6 +38,7 @@ function stoJSON(str){
 
 var tmptxt = catcher(tmpURL);
 var tmp = stoHTML(tmptxt);
+console.log("tmp="+tmp);
 //console.log(tmp);
 
 var alldoc = "";
@@ -63,10 +64,9 @@ if (tmp != null) {
 		document.getElementById("blog_list").innerHTML = alldoc;
 		i++;
 
-		console.log(nw);
-		console.log(nwhtml);
-		console.log(tmp);
-		console.log(alldoc);
+		console.log("nw="+nw);
+		console.log("nwhtml="+nwhtml);
+		console.log("alldoc="+alldoc);
 		/*
 		var nw = catcher(preURL + i + "/post.html");
 		if (nw != null) {
