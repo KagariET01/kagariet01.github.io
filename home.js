@@ -55,6 +55,7 @@ if (tmp != null) {
 
 			var nwhtml=stoHTML(nw);
 			nwhtml.querySelector("#title").href = "https://kagariet01.github.io/blog/?p="+i;
+			
 			tmp.querySelector("#docs").innerHTML = nwhtml.innerHTML;//將獲得的文章放入模板
 			//console.log(tmp);
 			var ad = tmp.innerHTML;
