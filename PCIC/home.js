@@ -26,7 +26,7 @@ function catcher(url) {
 }
 
 function stoHTML(str) {
-	const re = document.createElement('div');//re=建立新html變數，初始標籤為div
+	var re = document.createElement('div');//re=建立新html變數，初始標籤為div
 	re.innerHTML = str.trim();//將str放入re裡面(trim為去除空格，系統會自動將字串轉換成html格式)
 	return re;
 }
