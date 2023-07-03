@@ -56,6 +56,11 @@ if (tmp != null) {
 				i++;
 				continue;
 			}
+		}else if(nwcfg["p_only"]){
+			if(URLtag.get("p")!="PCIC"){
+				i++;
+				continue;
+			}
 		}
 		var nw=catcher(preURL + i + "/post.html");
 		var nwhtml=stoHTML(nw);//get docs
