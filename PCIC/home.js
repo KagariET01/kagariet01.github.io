@@ -60,6 +60,7 @@ if (tmp != null) {
 		var nwhtml=stoHTML(nw);//get docs
 		tmp.querySelector("#docs").innerHTML = nwhtml.innerHTML;//put docs into temp
 		alldoc=tmp+alldoc;
+		document.getElementById("blog_list").innerHTML = alldoc;
 		i++;
 
 		console.log(nw);
@@ -93,4 +94,3 @@ if (tmp != null) {
 }
 
 
-document.getElementById("blog_list").innerHTML = alldoc;
