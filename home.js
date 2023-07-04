@@ -66,4 +66,53 @@ if (tmp != null) {
 }
 
 
+
+
+
+
+
+
+
+
+const URL_result=URLtag.get('result');
+if (URL_result== "AC") {
+	var i = "AC";
+	{
+		var nw = catcher("https://kagariet01.github.io/blog/docs/" + i + "/post.html");
+			var nwHTML=stoHTML(nw);
+			
+
+			var nwhtml=stoHTML(nw);
+			nwhtml.querySelector("#title").href = "https://kagariet01.github.io/blog/?p="+i;
+			
+			tmp.querySelector("#docs").innerHTML = nwhtml.innerHTML;//將獲得的文章放入模板
+			//console.log(tmp);
+			var ad = tmp.innerHTML;
+			alldoc = ad +"<br>"+ alldoc;//將文章插入文章列表裡
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.getElementById("blog_list").innerHTML = alldoc;

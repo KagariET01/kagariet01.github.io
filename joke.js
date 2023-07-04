@@ -1,7 +1,3 @@
-const thisURL=window.location.search;
-const thisURLtagtxt=thisURL;
-const URLtag=new URLSearchParams(thisURLtagtxt)
-console.log("網址tag="+URLtag);
 
 
 function catcher(url) {
