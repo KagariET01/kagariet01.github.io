@@ -240,6 +240,11 @@ button {
 .y_center {/*垂直置中*/
 	align-content: center;
 }
+.allfill{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
 
 /*for blog*/
 #minitxt{

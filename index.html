@@ -10,6 +10,20 @@
 
 
 <body>
+	<script>
+		{//get URL tag and load blog	
+			function stoJSON(str){
+				var re=JSON.parse(str);	return re;
+			}
+		
+			const thisURL=window.location.search;//獲取目前的網址(就是把網址列一字不漏地複製到thisURL)
+			const URLtag=new URLSearchParams(thisURL);//URLSearchParams：獲取參數(就是網址?後面的東西)
+			const URL_result=URLtag.get('result');
+			if(URL_result==null){
+				window.location.href="https://kagariet01.github.io/?result=WA";
+			}
+		}
+	</script>
 	<meta charset="UTF-8">
 	<script src="/TEMP/temp.js"></script>
 	<header id="top"></header>

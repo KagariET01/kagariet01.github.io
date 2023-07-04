@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ET01_web</title>
+	<link id="style_css" rel="stylesheet" type="text/css" href="/TEMP/temp.css">
+	<link id="style_css" rel="stylesheet" type="text/css" href="/TEMP/temp_txt.css">
+</head>
+
+
+<body>
+	<meta charset="UTF-8">
+	<script src="/TEMP/temp.js"></script>
+	<header id="top"></header>
+
+	<!--內文here-->
+	<div id="main">
+		<div style="
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		">
+
+			<form id="f1" action="https://www.bing.com/search">
+				<input type="text" name="q" style="
+					width: 70%;
+					height: 50px;
+				">
+				<input type="button" onclick="myFunction()" value="給我搜" style="width: 70%;height: 50px;">
+			</form>
+
+			<script>
+				function myFunction() {
+					var input=document.getElementById("frm1");
+					if(input.elements[0].value=="答案"){
+						while(!confirm("聽說只要把result設成AC就能AC，那你知道現在要幹嘛了嗎")) {
+							alert("Good boy ，那現在就回 https://kagariet01.github.io 解題吧");
+						}
+					}else{
+						document.getElementById("frm1").submit();
+					}
+				}
+			</script>
+			
+
+		</div>
+
+	</div>
+
+	<script src="home.js"></script>
+</body>
+
+</html>
