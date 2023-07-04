@@ -25,6 +25,12 @@
 			CID=URLtag.get('C');
 		}
 		window.location.href="https://codeforces.com/problemset/problem/"+CID+"/"+QID;
+	}else if(URL_OJ=="at"){
+		var CID=URLtag.get('CID');
+		if(CID==null){
+			CID=URLtag.get('C');
+		}
+		window.location.href="https://atcoder.jp/contests/"+CID+"/tasks/"+CID+"_"+QID;
 	}
 }
 </script>
@@ -61,5 +67,16 @@ PID=A<br>
 	PID可簡寫成P<br>
 	CID可簡寫成C<br>
 	ex:https://kagariet01.github.io/swap/?OJ=zj&P=a001
+</p>
+<p>
+	07/04/2023 Update<br>
+	新增AtCoder支援(at)
+	格式同cf
+	如https://kagariet01.github.io/swap/?OJ=at&C=abc1&P=a
+	https://kagariet01.github.io/swap/?
+	OJ=at&
+	C=abc1&
+	P=a
+	會帶你到https://atcoder.jp/contests/abc1/tasks/abc1_a
 </p>
 </body>
