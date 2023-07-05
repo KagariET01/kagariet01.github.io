@@ -75,7 +75,7 @@ if (tmp != null) {
 
 
 const URL_result=URLtag.get('result');
-if (URL_result== "AC") {
+if (URL_result== "I_want_AC") {
 	var i = "AC";
 	{
 		var nw = catcher("https://kagariet01.github.io/blog/docs/" + i + "/post.html");
