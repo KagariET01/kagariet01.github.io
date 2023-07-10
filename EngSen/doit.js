@@ -80,9 +80,9 @@
 	}
 
 	var templst={};
-	templst["block"]=stoHTML(catcher("https://ashingtsai.synology.me/EngSen/block.html"));
-	templst["row"]=stoHTML(catcher("https://ashingtsai.synology.me/EngSen/row.html"));
-	templst["column"]=stoHTML(catcher("https://ashingtsai.synology.me/EngSen/column.html"));
+	templst["block"]=stoHTML(catcher("https://kagariet01.github.io/EngSen/block.html"));
+	templst["row"]=stoHTML(catcher("https://kagariet01.github.io/EngSen/row.html"));
+	templst["column"]=stoHTML(catcher("https://kagariet01.github.io/EngSen/column.html"));
 
 	function solve(jsf){
 		console.log(jsf);
