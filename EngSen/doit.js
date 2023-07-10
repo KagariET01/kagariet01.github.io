@@ -59,15 +59,32 @@
 									{
 										"type":"row",
 										"index":[
-											{"type":"block","index":"IO 間接受詞"},
-											{"type":"block","index":"DO 直接受詞"}
+											{"type":"block","index":"O 受詞"},
+											
+											{
+												"type":"column",
+												"index":[
+													{
+														"type":"row",
+														"index":[
+															{"type":"block","index":"X"}
+														]
+													},
+													{
+														"type":"row",
+														"index":[
+															{"type":"block","index":"OC 受詞補語"}
+														]
+													}
+												]
+											}
 										]
 									},
 									{
 										"type":"row",
 										"index":[
-											{"type":"block","index":"O 受詞"},
-											{"type":"block","index":"OC 受詞補語"}
+											{"type":"block","index":"IO 間接受詞"},
+											{"type":"block","index":"DO 直接受詞"}
 										]
 									}
 								]
