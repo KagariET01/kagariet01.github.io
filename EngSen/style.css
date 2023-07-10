@@ -1,12 +1,23 @@
+:root{
+	--padding_size: 5px;
+}
+
 .row{
 	display: flex;
 	flex-direction: row;
+	width: auto;
+	height: auto;
 }
 .column{
 	display: flex;
 	flex-direction: column;
+	width: auto;
+	height: auto;
 }
 .block{
 	border: ridge;
 	border-color: #000;
+	padding: var(--padding_size);
+	width: auto;
+	height: auto;
 }

@@ -23,32 +23,84 @@
 		var re=JSON.parse(str);
 		return re;
 	}
+	function copyer(n){
+		var re=n;
+		return re;
+	}
 
 
 	var data={
 		"type":"row",
 		"index":[
-			{"type":"block","index":"l1"},
-			{"type":"block","index":"l2"},
-			{"type":"block","index":"l3"}
+			{"type":"block","index":"S 主詞"},
+			{
+				"type":"column",
+				"index":[
+					{
+						"type":"row",
+						"index":[
+							{"type":"block","index":"Vi 不及物動詞"},
+							{
+								"type":"column",
+								"index":[
+									{"type":"block","index":" X "},
+									{"type":"block","index":"SC 主詞補語"}
+								]
+							}
+						]
+					},
+					{
+						"type":"row",
+						"index":[
+							{"type":"block","index":"Vt 及物動詞"},
+							{
+								"type":"column",
+								"index":[
+									{
+										"type":"row",
+										"index":[
+											{"type":"block","index":"IO 間接受詞"},
+											{"type":"block","index":"DO 直接受詞"}
+										]
+									},
+									{
+										"type":"row",
+										"index":[
+											{"type":"block","index":"O 受詞"},
+											{"type":"block","index":"OC 受詞補語"}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
 		]
 	}
 
-	var templst;
-	templst["block"]=stoHTML(catcher("https://kagariet01.github.io/EngSen/block.html"));
-	templst["row"]=stoHTML(catcher("https://kagariet01.github.io/EngSen/row.html"));
+	var templst={};
+	templst["block"]=stoHTML(catcher("https://ashingtsai.synology.me/EngSen/block.html"));
+	templst["row"]=stoHTML(catcher("https://ashingtsai.synology.me/EngSen/row.html"));
+	templst["column"]=stoHTML(catcher("https://ashingtsai.synology.me/EngSen/column.html"));
 
 	function solve(jsf){
+		console.log(jsf);
 		var re=document.createElement("div");
+
 		if(jsf["type"]=="block"){
-			re=templst["block"];
-			re.querySelectory("in").innerHTML=jsf["index"];
-		}else if(jsf["type"]=="row"){
-			
-			for(var nw:jsf["index"]){
-				re.innerHTML+=solve(nw).innerHTML;
+			re=copyer(templst["block"]);
+			var aaa=re.querySelector("#in").innerHTML;
+			re.querySelector("#in").innerHTML=jsf["index"];
+		}
+		else{
+			re=copyer(templst[jsf["type"]]);
+			re.querySelector("#in").innerHTML="";
+			for(var i=0;i<(jsf["index"]).length;i++){
+				re.querySelector("#in").innerHTML+=solve(jsf["index"][i]).innerHTML;
 			}
 		}
+		console.log(re);
 		return re;
 	}
 
