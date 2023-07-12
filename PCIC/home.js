@@ -1,3 +1,6 @@
+const admin=0;
+
+
 //cfg
 const preURL="https://kagariet01.github.io/PCIC/docs/"
 const tmpURL="https://kagariet01.github.io/TEMP/blog_tmp.html"
@@ -42,21 +45,22 @@ console.log("tmp="+tmp);
 //console.log(tmp);
 
 var alldoc = "";
+var topdoc="";
 
 if (tmp != null) {
 	var i = 1;
 	while (true) {
 		var nwcfg=catcher(preURL + i + "/cfg.json");//get cfg
-		if(nwcfg==null){
+		if(nwcfg==null && !admin){
 			break;
 		}
 		nwcfg=stoJSON(nwcfg);
-		if(nwcfg["hide"]==true){
+		if(nwcfg["hide"] && !admin){
 			if(URLtag.get("showhide")!=1){
 				i++;
 				continue;
 			}
-		}else if(nwcfg["p_only"]){
+		}else if(nwcfg["p_only"] && !admin){
 			if(URLtag.get("p")!="PCIC"){
 				i++;
 				continue;
@@ -67,9 +71,13 @@ if (tmp != null) {
 		console.log("nw="+nw);
 		console.log("nwhtml="+nwhtml);
 		tmp.querySelector("#docs").innerHTML = nwhtml.innerHTML;//put docs into temp
-		alldoc=tmp.innerHTML+alldoc;
-		document.getElementById("blog_list").innerHTML = alldoc;
-		i++;
+		if(nwcfg["top"]){
+			topdoc=tmp.innerHTML+topdoc;
+		}else{
+			alldoc=tmp.innerHTML+alldoc;
+		}
+			document.getElementById("blog_list").innerHTML = topdoc+alldoc;
+			i++;
 
 		console.log("alldoc="+alldoc);
 		/*
