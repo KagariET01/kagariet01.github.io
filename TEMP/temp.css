@@ -260,3 +260,20 @@ button {
 #del_line{
 	text-decoration: line-through;
 }
+
+.minitxt{
+	color:#888;
+	font-size: 18px;
+}
+.ET01{
+	color:#f00;
+}
+.member{
+	color:#ff0;
+}
+.time{
+	color:#ccc;
+}
+.del_line{
+	text-decoration: line-through;
+}
