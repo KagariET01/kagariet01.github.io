@@ -32,11 +32,14 @@
 			<script>
 				function myFunction() {
 					var input=document.getElementById("f1");
+					var mysearch=input.elements[0].value;
 					if(input.elements[0].value=="答案"){
 						while(!confirm("聽說只要把result的值設成I_want_AC就能AC，那你知道現在要如何AC了把")) {
 							alert("多讀幾遍就會知道要如何AC的，試試看");
 						}
 						alert("Good boy ，那現在就回 https://kagariet01.github.io 解題吧");
+					}else if(mysearch=="鮭魚和尖叫雞會不會賽跑？" || mysearch=="如果會的話誰會先到終點？" || mysearch=="鮭魚和尖叫雞會不會賽跑？如果會的話誰會先到終點？"){
+						alert("ㄌㄌ\n-by bbb b");
 					}else{
 						document.getElementById("frm1").submit();
 					}
