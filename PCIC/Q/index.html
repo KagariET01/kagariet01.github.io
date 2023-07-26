@@ -22,13 +22,22 @@
         width:100%;
 			">
 				<textarea 
-          placeholder="我是匿名提問箱" 
+          placeholder="(必填)我是匿名提問箱" 
           type="text" 
           name="q" 
           id="q"
           style="
   					width: 70%;
   					height: 100px;
+				"></textarea>
+				<textarea 
+          placeholder="(非必填)想要留名？也不是不行" 
+          type="text" 
+          name="name" 
+          id="name"
+          style="
+  					width: 70%;
+  					height: 25px;
 				"></textarea>
 				<input type="button" onclick="myFunction()" value="送出" style="width: 100px;height: 50px;">
         <script>
@@ -41,14 +50,24 @@
             request.setRequestHeader('Content-type', 'application/json');
             //獲取輸入內容
             var sheet=document.getElementById("q").value;
+            var name=document.getElementById("name").value;
+						if(name="")name="匿名";
+						if(sheet=""){
+							alert("匿名箱不可為空");
+							return 0;
+						}
             //設定傳到DC的內容
             var myEmbed = [{
               "author": {
-                "name": "匿名提問箱服務", "icon_url":"https://cdn.discordapp.com/avatars/1133622599813972019/b4e79be90365547c96598b25d8b7b76d.webp"
+                "name": "提問箱服務", "icon_url":"https://cdn.discordapp.com/avatars/1133622599813972019/b4e79be90365547c96598b25d8b7b76d.webp"
               },
-              "title": "有人提交了匿名提問",
+              "title": "有人提交了提問",
               "color": 16733525,
               "fields": [
+                {
+                  "name": "名稱",
+                  "value": name
+								},
                 {
                   "name": "內容",
                   "value": sheet
