@@ -41,6 +41,10 @@
             request.setRequestHeader('Content-type', 'application/json');
             //獲取輸入內容
             var sheet=document.getElementById("q").value;
+						if(sheet==""){
+							alert("提問箱內容不可為空");
+							return 0;
+						}
             //設定傳到DC的內容
             var myEmbed = [{
               "author": {
@@ -61,6 +65,7 @@
             };
             request.send(JSON.stringify(params));//傳送回復到DC
             alert("已送出，感謝您撥空填寫問卷");
+						window.location.href=window.location.search;
           }
         </script>
 			</div>
