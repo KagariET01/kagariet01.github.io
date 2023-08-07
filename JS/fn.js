@@ -3,27 +3,16 @@
 只要用<script src="/JS/fn.js"></script>就能使本區所有內容
 */
 
-/*function readfile(URL){//傳入網址，回傳該檔案內容
-	var OSbot=new XMLHttpRequest;
+function readfile(URL){//傳入網址，回傳該檔案內容
+	var OSbot=new XMLHttpRequest;//檔案操作器
 	OSbot.open("GET",URL,0);
 	OSbot.send(null);
-	var re=OSbot.responseText;
-	return re;
-}*/
-function readfile(URL){
-	var OSbot=require('fs');
 	var re;
-	OSbot.readfile(
-		URL,
-		'utf8',
-		(err,data)=>{
-			if(err){
-				re=404;
-			}else{
-				re=data;
-			}
-		}
-	);
+	if(OSbot.status==404){
+		re=null;
+	}else{
+		re=OSbot.responseText;
+	}
 	return re;
 }
 function stoHTML(str){//將字串轉換成HTML
@@ -32,11 +21,13 @@ function stoHTML(str){//將字串轉換成HTML
 	return re;
 }
 function stoJSON(str){//將字串轉換成JSON
-	var re=JSON.parse(str);
+	var re=JSON.parse(str.trim());
 	return re;
 }
 const nowURL=window.location.search;//獲取目前的網址(把網址列那一串一字不漏地複製到thisURL)
 const URLtag=new URLSearchParams(nowURL);//URLSearchParams：獲取參數(就是網址?後面的東西)
 
-var CFG=readfile("http://192.168.5.74/config.json");
-console.log(stoJSON(CFG));
+var CFGtxt=readfile('/config.json');
+var CFG=stoJSON(CFGtxt);
+console.log(CFGtxt);
+//console.log(CFG);
