@@ -1,0 +1,22 @@
+:root{
+	--box_color:#5ff;
+	--box_color_2:#f55;
+	--shadow_len:20px;
+	--shadow_padding: -5px;
+	--border-width: 2px;
+	--merge_color: -moz-linear-gradient(-45deg, var(--box_color) 90%, var(--box_color_2));
+	--radius:10px;
+}
+
+.box{
+	box-shadow: 0 0 var(--shadow_len) 0px var(--box_color), inset 0 0 var(--shadow_len) 0 var(--box_color);
+	border-style: solid;
+	border-width: var(--border-width);
+	border-color: var(--box_color);
+	padding: calc(var(--shadow_len) + var(--shadow_padding));
+	border-radius:var(--radius);
+	margin: calc(var(--shadow_len) + var(--shadow_padding));
+}
+body{
+	background: black;
+}
