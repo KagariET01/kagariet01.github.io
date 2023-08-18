@@ -6,3 +6,11 @@
 var iconHTML='<link rel="icon" type="image/x-icon" href="'+CFG["iconURL"]+'">'
 //console.log(iconHTML);
 document.getElementsByTagName("head")[0].innerHTML+=iconHTML;
+
+var headURL=CFG["headURL"];
+
+console.log(document);
+//.innerHTML=readfile(headURL);
+var headtxt=readfile(headURL);
+console.log(headtxt);
+document.getElementById('head').innerHTML=headtxt;

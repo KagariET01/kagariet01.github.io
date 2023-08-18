@@ -1,0 +1,43 @@
+/*填滿*/
+.wfull{
+	width: 100%;
+}
+
+
+/*初始化flex*/
+.flex{
+	display: flex;
+}
+
+
+/*物件水平排版*/
+.left{/*元素靠左(預設)*/
+	justify-content: flex-start;
+}
+.center{/*元素置中*/
+	justify-content: center;
+}
+.right{/*元素靠右*/
+	justify-content: flex-end;
+}
+
+
+
+.wrap{/*自動換行*/
+	flex-wrap: wrap;
+}
+
+
+/*物件排列*/
+.row{/*橫向排版(預設)*/
+	flex-direction: row;
+}
+.column{/*垂直排版*/
+	flex-direction: column
+}
+.row-reverse{/*反橫向排版*/
+	flex-direction: row-reverse;
+}
+.column-reverse{/*反直向排版*/
+	flex-direction: column-reverse;
+}
