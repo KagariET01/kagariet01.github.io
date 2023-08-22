@@ -27,7 +27,4 @@ function stoJSON(str){//將字串轉換成JSON
 const nowURL=window.location.search;//獲取目前的網址(把網址列那一串一字不漏地複製到thisURL)
 const URLtag=new URLSearchParams(nowURL);//URLSearchParams：獲取參數(就是網址?後面的東西)
 
-var CFGtxt=readfile('/config.json');
-var CFG=stoJSON(CFGtxt);
-console.log(CFGtxt);
 //console.log(CFG);

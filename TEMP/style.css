@@ -1,24 +1,56 @@
+/*基礎設定*/
 :root{
-	--box_color:#5ff;
+	/*顏色*/
+	--box_color:#5ff;/*陰影(光暈)顏色*/
+	--border_color:#aff;/*邊框顏色，邊框顏色調得比光暈顏色量，可增加整體亮度感*/
 	--box_color_2:#f55;
+	--link_color:#5ff;
+	/*尺寸、大小*/
 	--shadow_len:20px;/*模糊擴散等級*/
-	--margin_size:0px;/*向外留邊*/
+	--margin_size:5px;/*向外留邊*/
 	--border_width: 2px;/*邊框大小*/
 	--padding_size: 15px;/*向內留邊*/
 	--radius:10px;/*圓角大小*/
-	color: #fff;
+	color: #fff;/*文字顏色*/
+	--bg_color:#000;/*被景色*/
+	--button_width:100px;/*按鈕大小*/
+	/*文字大小、字體*/
 	--h1_fontsize: 40px;
+	font-family: 'font-hun',"Microsoft JhengHei";
 }
 
+body{
+	background: var(--bg_color);
+}
 .box{
 	box-shadow: 0 0 var(--shadow_len) 0px var(--box_color), inset 0 0 var(--shadow_len) 0 var(--box_color);
 	margin: calc(var(--margin_size));
 	border-width: var(--border_width);
 	border-style: solid;
-	border-color: var(--box_color);
+	border-color: var(--border_color);
 	padding: calc(var(--padding_size));
 	border-radius:var(--radius);
 }
-body{
-	background: black;
+.box_bottom{
+	box-shadow: 0 var(--shadow_len) var(--shadow_len) 0px var(--box_color), inset 0 0 var(--shadow_len) 0 var(--box_color);
+	
+}
+.h1{
+	font-size: 40px;
+}
+.h2{
+	font-size: 25px;
+}
+a{
+	color: var(--link_color);
+}
+
+/*字體設定*/
+@font-face {
+	font-family: 'font-hun';
+	src:
+	url("/TEMP/font/hun/hun.woff2") format("woff"),
+	url("/TEMP/font/hun/hun.woff") format("woff"),
+	url("/TEMP/font/hun/hun.eot") format("embedded-opentype"),
+	url("/TEMP/font/hun/hun.ttf")format("truetype");
 }
