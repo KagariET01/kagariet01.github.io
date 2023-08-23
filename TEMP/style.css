@@ -26,11 +26,6 @@
 	background-color: var(--box_background_color);
 	transition:all 0.25s;
 }
-.box:hover{
-	--box_color:var(--box_color_2);
-	--box_background_color:var(--box_background_color_2);
-	--border_color:var(--border_color_2);
-}
 
 body{
 	background: black;
@@ -47,6 +42,8 @@ body::after{
 a{
 	text-decoration: none;
 }
-.no_anime{/*將color_2設成color_1*/
-	transition:none !important;
+.anime:hover{/*啟動動畫*/
+	--box_color:var(--box_color_2);
+	--box_background_color:var(--box_background_color_2);
+	--border_color:var(--border_color_2);
 }
