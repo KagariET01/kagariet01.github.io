@@ -6,8 +6,9 @@
 	--border_width: 2px;/*邊框大小*/
 	--padding_size: 15px;/*向內留邊*/
 	--radius:10px;/*圓角大小*/
-	color: #fff;
-	--h1_fontsize: 40px;
+	--after_color:#fff8;/*尾端文字顏色*/
+	color: #fff;/*文字顏色*/
+	--h1_fontsize: 40px;/*標題文字大小*/
 }
 
 .box{
@@ -21,4 +22,16 @@
 }
 body{
 	background: black;
+}
+body::after{
+	content: "by ET01 var 3.0.0 licenses"" "url('https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png');
+	bottom: 5px;
+	color: var(--after_color);
+	text-align: center;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+a{
+	text-decoration: none;
 }
