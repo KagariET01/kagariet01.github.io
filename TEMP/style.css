@@ -31,7 +31,7 @@ body{
 	background: black;
 }
 body::after{
-	content: "by ET01 var 3.0.0 licenses"" "url('https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png');
+	content: "by:ET01 var:3.0.0 licenses:"url('https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png');
 	bottom: 5px;
 	color: var(--after_color);
 	text-align: center;
