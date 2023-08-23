@@ -1,6 +1,10 @@
 :root{
-	--box_color:#5ff;
-	--box_color_2:#f55;
+	--box_color:#5ff;/*初始顏色*/
+	--box_background_color:#5ff1;/*背景色*/
+	--box_color_2:#f00;/*指標指到時，變成的顏色*/
+	--box_background_color_2:#f003;/*指標指到時，變成的背景色*/
+	--border_color:#aff;/*邊框顏色，將此亮度調高可以讓光暈效果更強*/
+	--border_color_2:#f55;/*邊框顏色，將此亮度調高可以讓光暈效果更強*/
 	--shadow_len:20px;/*模糊擴散等級*/
 	--margin_size:0px;/*向外留邊*/
 	--border_width: 2px;/*邊框大小*/
@@ -16,10 +20,18 @@
 	margin: calc(var(--margin_size));
 	border-width: var(--border_width);
 	border-style: solid;
-	border-color: var(--box_color);
+	border-color: var(--border_color);
 	padding: calc(var(--padding_size));
 	border-radius:var(--radius);
+	background-color: var(--box_background_color);
+	transition:all 0.25s;
 }
+.box:hover{
+	--box_color:var(--box_color_2);
+	--box_background_color:var(--box_background_color_2);
+	--border_color:var(--border_color_2);
+}
+
 body{
 	background: black;
 }
@@ -34,4 +46,7 @@ body::after{
 }
 a{
 	text-decoration: none;
+}
+.no_anime{/*將color_2設成color_1*/
+	transition:none !important;
 }
