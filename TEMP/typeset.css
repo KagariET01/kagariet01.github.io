@@ -3,6 +3,9 @@
 	width: 100%;
 }
 
+.text_center{/*文字至中*/
+	text-align: center;
+}
 
 /*初始化flex*/
 .flex{
@@ -20,8 +23,6 @@
 .right{/*元素靠右*/
 	justify-content: flex-end;
 }
-
-
 
 .wrap{/*自動換行*/
 	flex-wrap: wrap;

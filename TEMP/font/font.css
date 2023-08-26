@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'font-hun';
+	src:
+	url("/font/hun/hun.woff2") format("woff"),
+	url("/font/hun/hun.woff") format("woff"),
+	url("/font/hun/hun.eot") format("embedded-opentype"),
+	url("/font/hun/hun.ttf")format("truetype");
+}
