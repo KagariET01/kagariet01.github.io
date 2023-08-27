@@ -23,6 +23,7 @@
 	font-family: 'font-hun',"Microsoft JhengHei";
 }
 
+
 body{
 	background: var(--bg_color);
 }
@@ -37,9 +38,17 @@ body{
 	background-color: var(--box_background_color);
 	transition:all 0.25s;
 }
-.box_bottom{
-	box-shadow: 0 var(--shadow_len) var(--shadow_len) 0px var(--box_color), inset 0 0 var(--shadow_len) 0 var(--box_color);
-	
+
+.box_botton::after{
+	content: '';
+	display: flex;
+	/* clip-path: polygon(0 0,0 100%,100% 100%,100% 0); */
+	box-shadow: 0 0 var(--shadow_len) calc(var(--border_width)*2) var(--box_color);
+	height: 1px;
+	width: 100%;
+	background-color: var(--border_color);
+	transition:all 0.25s;
+	margin-bottom: var(--shadow_len);
 }
 .h1{
 	font-size: 40px;
@@ -49,6 +58,10 @@ body{
 }
 a{
 	color: var(--link_color);
+}
+hr{
+	box-shadow: 0 0 var(--shadow_len) var(--border_width) var(--box_color);
+	border-color: var(--border_color);
 }
 
 /*字體設定*/

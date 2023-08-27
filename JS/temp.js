@@ -3,14 +3,14 @@
 包括但不限於網頁名、網頁icon、網頁模板、CSS...
 一樣可直接調用
 */
-var iconHTML='<link rel="icon" type="image/x-icon" href="'+CFG["iconURL"]+'">'
-//console.log(iconHTML);
+//icon
+var iconURL=CFG["iconURL"];
+var iconHTML='<link rel="icon" type="image/x-icon" href="'+iconURL+'">'
 document.getElementsByTagName("head")[0].innerHTML+=iconHTML;
 
 var headURL=CFG["headURL"];
+document.getElementById('head').innerHTML=readfile(headURL);
 
-console.log(document);
-//.innerHTML=readfile(headURL);
-var headtxt=readfile(headURL);
-console.log(headtxt);
-document.getElementById('head').innerHTML=headtxt;
+var titlename=CFG["title"];
+var titleHTML='<title>'+titlename+'</title>'
+document.getElementsByTagName("head")[0].innerHTML+=titleHTML;

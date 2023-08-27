@@ -1,0 +1,11 @@
+@media only screen and (max-width:600px){
+	.button_sz{width: 75%;}
+}
+@media only screen and (min-width:600px){
+	.button_sz{width: 150px;}
+}
+.son{
+	--box_color:#55f;
+	--border_color:#aaf;
+	--box_background_color:#55f1;
+}

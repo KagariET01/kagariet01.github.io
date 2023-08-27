@@ -28,6 +28,40 @@
 .right{/*元素靠右*/
 	justify-content: flex-end;
 }
+.sparound{/*元素平均分攤，周圍留有固定寬度(邊邊框度=中間/2)*/
+	justify-content: space-around;
+}
+.spsame{/*元素平均分攤，空格等大*/
+	justify-content: space-evenly;
+}
+
+/*物件垂直排版*/
+.cleft{/*元素靠上(預設)*/
+	align-content: flex-start;
+}
+.ccenter{/*元素置中*/
+	align-content: center;
+}
+.cright{/*元素靠下*/
+	align-content: flex-end;
+}
+.cfull{/*填滿*/
+	align-content: stretch;
+}
+
+/*大小不一樣大的元素對其*/
+.ileft{/*元素向上對其(預設)*/
+	align-items: flex-start;
+}
+.icenter{/*元素垂直置中*/
+	align-items: center;
+}
+.iright{/*元素向下對其(預設)*/
+	align-items: flex-end;
+}
+.isame{/*拉成一樣大*/
+	align-items: stretch;
+}
 
 .wrap{/*自動換行*/
 	flex-wrap: wrap;

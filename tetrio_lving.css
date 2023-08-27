@@ -1,0 +1,195 @@
+.leveltag {
+	position: relative;
+	display: inline-block;
+	font-size: 1.1em;
+	padding-top: 0.2em;
+	padding-left: 0.3em;
+	padding-bottom: 0;
+	padding-right: 1em;
+	line-height: 1em;
+	color: #000D;
+	font-family: 'HUN';
+	font-weight: 900;
+	
+	margin-right: 0em;
+	margin-top: -0.5em;
+	margin-bottom: -0.5em;
+	margin-left: 0.25em;
+	z-index: 1;
+}
+.leveltag::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #F00;
+	z-index: -1;
+}
+/* Leveltag badge shapes */
+.leveltag.lt_shape_0::before {
+	clip-path: polygon(0.2em 0, 100% 0, calc(100% - 0.7em) 100%, 0.2em 100%, 0 calc(100% - 0.2em), 0 0.2em);
+}
+.leveltag.lt_shape_1::before {
+	clip-path: polygon(0.2em 0, 100% 0, calc(100% - 0.7em) 100%, 0.2em 100%, 0 calc(100% - 0.2em), 0 0.2em);
+}
+.leveltag.lt_shape_2::before {
+	clip-path: polygon(0.2em 0, 100% 0, calc(100% - 0.6em) 50%, 100% 100%, 0.2em 100%, 0 calc(100% - 0.2em), 0 0.2em);
+}
+.leveltag.lt_shape_3::before {
+	clip-path: polygon(0.2em 0, 100% 0, calc(100% - 0.5em) 50%, 100% 100%, 0.2em 100%, 0 calc(100% - 0.2em), 0 0.2em);
+}
+.leveltag.lt_shape_4::before {
+	clip-path: polygon(0.2em 0, 100% 0, calc(100% - 0.4em) 30%, calc(100% - 0.4em) 70%, 100% 100%, 0.2em 100%, 0 calc(100% - 0.2em), 0 0.2em);
+}
+.leveltag.lt_golden::before {
+	clip-path: polygon(0.2em 0, calc(100% - 0.7em) 0, calc(100% - 0.35em) 50%, calc(100% - 0.7em) 100%, 0.2em 100%, 0 calc(100% - 0.2em), 0 0.2em);
+}
+/* Leveltag badge colors */
+.leveltag.lt_badge_color_0::before {
+	background-color:#ccc;
+}
+.leveltag.lt_badge_color_1::before {
+	background-color:#f22;
+}
+.leveltag.lt_badge_color_2::before {
+	background-color:#f82;
+}
+.leveltag.lt_badge_color_3::before {
+	background-color:#ff2;
+}
+.leveltag.lt_badge_color_4::before {
+	background-color:#8f2;
+}
+.leveltag.lt_badge_color_5::before {
+	background-color:#2f2;
+}
+.leveltag.lt_badge_color_6::before {
+	background-color:#2ff;
+}
+.leveltag.lt_badge_color_7::before {
+	background-color:#22f;
+}
+.leveltag.lt_badge_color_8::before {
+	background-color:#82f;
+}
+.leveltag.lt_badge_color_9::before {
+	background-color:#f2f;
+}
+.leveltag.lt_golden::before {
+	background-color:#fd0;
+}
+/* Leveltag badge color numbers */
+.leveltag.lt_badge_color_0 {
+	color: #000D;
+}
+.leveltag.lt_badge_color_1 {
+	color: #FFFD;
+}
+.leveltag.lt_badge_color_2 {
+	color: #000D;
+	
+}
+.leveltag.lt_badge_color_3 {
+	color: #000D;
+	
+}
+.leveltag.lt_badge_color_4 {
+	color: #000D;
+	
+}
+.leveltag.lt_badge_color_5 {
+	color: #000D;
+	
+}
+.leveltag.lt_badge_color_6 {
+	color: #000D;
+	
+}
+.leveltag.lt_badge_color_7 {
+	color: #FFFD;
+	
+}
+.leveltag.lt_badge_color_8 {
+	color: #FFFD;
+	
+}
+.leveltag.lt_badge_color_9 {
+	color: #FFFD;
+	
+}
+.leveltag.lt_golden {
+	color: #000D;
+	
+}
+
+.leveltag::after {
+	content: '';
+	position: absolute;
+	left: calc(100% - 0.5em);
+	top: 0;
+	bottom: 0;
+	width: 1.5em;
+	background-color: #F00;
+	z-index: -1;
+}
+/* Leveltag item shapes */
+.leveltag.lt_shape_0::after {
+	clip-path: polygon(0.7em 0, 1em 0, 0.3em 100%, 0 100%);
+}
+.leveltag.lt_shape_1::after {
+	clip-path: polygon(0.7em 0, 1.4em 100%, 0 100%);
+}
+.leveltag.lt_shape_2::after {
+	clip-path: polygon(0.7em 0, 0.1em 50%, 0.7em 100%, 1.3em 50%);
+}
+.leveltag.lt_shape_3::after {
+	clip-path: polygon(0.7em 0, 0.2em 50%, 0.7em 100%, 1.2em 75%, 1.2em 25%);
+}
+.leveltag.lt_shape_4::after {
+	clip-path: polygon(0.75em 0, 0.25em 30%, 0.25em 70%, 0.75em 100%, 1.25em 70%, 1.25em 30%);
+}
+.leveltag.lt_golden::after {
+	left: 0.2em;
+	top: 0;
+	right: 0.2em;
+	bottom: 0;
+	background: linear-gradient(to bottom, #FFB400 0%, #FFD800 50%, #F7E167 50%, #FFD800 100%);
+	filter: blur(8px);
+	z-index: -2;
+	pointer-events: none;
+	opacity: 0.5;
+	will-change: transform;
+}
+/* Leveltag item colors */
+.leveltag.lt_shape_color_0::after {
+	background: linear-gradient(to bottom, #C9C9C9 0%, #E4E4E4 50%, #C9C9C9 100%);
+}
+.leveltag.lt_shape_color_1::after {
+	background: linear-gradient(to bottom, #FD3535 0%, #FF6D6D 50%, #FD3535 100%);
+}
+.leveltag.lt_shape_color_2::after {
+	background: linear-gradient(to bottom, #F56200 0%, #FFA162 50%, #F56200 100%);
+}
+.leveltag.lt_shape_color_3::after {
+	background: linear-gradient(to bottom, #E9D41E 0%, #EDDE5F 50%, #E9D41E 100%);
+}
+.leveltag.lt_shape_color_4::after {
+	background: linear-gradient(to bottom, #90DD21 0%, #B5F856 50%, #90DD21 100%);
+}
+.leveltag.lt_shape_color_5::after {
+	background: linear-gradient(to bottom, #23EE53 0%, #7DF89A 50%, #23EE53 100%);
+}
+.leveltag.lt_shape_color_6::after {
+	background: linear-gradient(to bottom, #22F0DA 0%, #8AFDF1 50%, #22F0DA 100%);
+}
+.leveltag.lt_shape_color_7::after {
+	background: linear-gradient(to bottom, #1F6CEC 0%, #84B2FE 50%, #1F6CEC 100%);
+}
+.leveltag.lt_shape_color_8::after {
+	background: linear-gradient(to bottom, #8644FF 0%, #BB96FF 50%, #8644FF 100%);
+}
+.leveltag.lt_shape_color_9::after {
+	background: linear-gradient(to bottom, #E81BEA 0%, #FEA4FF 50%, #E81BEA 100%);
+}
