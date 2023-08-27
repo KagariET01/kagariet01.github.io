@@ -1,0 +1,31 @@
+<a id="title"><h1>Git筆記：操控多個遠端倉庫、建立Git伺服器</h1></a>
+<h2 id="minitxt">
+by 
+<span id="ET01">ET01 </span>
+at 
+<span id="time">08/09/2023/10:03</span>
+</h2>
+
+<p>
+	假如我在GitHub和GitLab有同樣的倉庫，我要如何同時操控這兩個遠端倉庫？<br>
+	<ol type="1">
+		<li>使用git remote set-url &lt;你的遠端名稱here(通常是origin)&gt; --add "&lt;網址here&gt;"，新增</li>
+	</ol>
+	完成，之後你使用git push，會自動把檔案上傳到GitHub和GitLab<br>
+</p>
+
+<p>
+	我想要建立Git伺服器<br>
+	<ol type="1">
+		<li>
+			使用git --bare init來初始化你的倉庫為裸倉庫，用於架設git伺服器<br>
+			或者使用git clone --bare &lt;Git伺服器位置&gt; &lt;既有Git倉庫網址here&gt;
+		</li>
+	</ol>
+</p>
+
+<pre id="jsonData" style="display:none">
+	{
+		"hide":false
+	}
+</pre>

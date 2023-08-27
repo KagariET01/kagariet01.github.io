@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-tw" style="height: 100%;">
+	<head>
+		<meta charset="UTF-8">
+		<title>ET01_web</title>
+		<link id="style_css" rel="stylesheet" type="text/css" href="/TEMP/temp.css">
+	</head>
+
+
+	<body style="height: 95%;">
+		<div class="x_center" style="height: 100%;">
+			<div style="
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				width:100%;
+				height: 100%;
+			">
+				<h1 style="color: #fff;">PCIC的門</a></h1>
+				<input type="button" onclick="myFunction()" value="敲敲敲" style="font-size: -webkit-xxx-large; width: 50%;height: 50%;">
+				<script>
+					function myFunction(){
+						//webhook 網址
+						var hookURL="https://discord.com/api/webhooks/1136151051536453633/onRg-U8k5ob17-ZMjgIonuRB71Te3odubRe9MjtFaHQ3gf_zaM0nW88Dj6wPjaS7bDHR";
+						var request=new XMLHttpRequest();
+						request.open("POST",hookURL);
+						//設定傳送型態為json
+						request.setRequestHeader('Content-type', 'application/json');
+						//設定傳到DC的內容
+						var myEmbed = [{
+							"author": {
+								"name": "電子門鈴服務", "icon_url":"https://cdn.discordapp.com/avatars/1133622599813972019/b4e79be90365547c96598b25d8b7b76d.webp"
+							},
+							"title": "有人在敲門",
+							"color": 16733525,
+              "fields": [
+                {
+                  "name": "敲門時間",
+                  "value": ("<t:"+Math.round(Date.now()/1000)+":f>")
+                }
+							]
+						}];
+						var params = {
+							username: "尖叫ㄐ服務",//bot名稱
+							embeds: myEmbed//傳送內容
+						};
+						request.send(JSON.stringify(params));//傳送回復到DC
+						alert("已敲門");
+					}
+				</script>
+			</div>
+
+		</div>
+	</body>
+</html>
