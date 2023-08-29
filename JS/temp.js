@@ -14,3 +14,11 @@ document.getElementById('head').innerHTML=readfile(headURL);
 var titlename=CFG["title"];
 var titleHTML='<title>'+titlename+'</title>'
 document.getElementsByTagName("head")[0].innerHTML+=titleHTML;
+
+var vert="";
+for(var i=0;i<CFG["button"].length;i++){
+	console.log(vert);
+	vert+="\""+CFG["button"][i]["name"]+":";
+	vert+=CFG["button"][i]["value"]+" \"";
+}
+document.head.innerHTML+="<style>body::after{content:"+vert+";}</style>"

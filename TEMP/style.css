@@ -22,10 +22,26 @@
 	--h1_fontsize: 40px;
 	font-family: 'font-hun',"Microsoft JhengHei";
 }
+.PCIC{
+	--box_color:#55f;
+	--border_color:#aaf;
+	--box_background_color:#55f1;
+	--box_color_2:#f5f;
+	--border_color_2:#faf;
+	--box_background_color_2:#f5f1;
+}
+
+
+
 
 
 body{
 	background: var(--bg_color);
+}
+button{
+	background-color: #000;
+	border: none;
+	color: #fff;
 }
 .box{
 	box-shadow: 0 0 var(--shadow_len) 0px var(--box_color), inset 0 0 var(--shadow_len) 0 var(--box_color);
@@ -50,6 +66,9 @@ body{
 	transition:all 0.25s;
 	margin-bottom: var(--shadow_len);
 }
+.button{
+	width: 200px;
+}
 .h1{
 	font-size: 40px;
 }
@@ -73,9 +92,15 @@ hr{
 	url("/TEMP/font/hun/hun.eot") format("embedded-opentype"),
 	url("/TEMP/font/hun/hun.ttf")format("truetype");
 }
+.hun{
+	font-family: 'font-hun';
+}
+.MSN{
+	font-family: 'Microsoft JhengHei UI';
+}
 
 body::after{
-	content: "by:ET01 var:3.0.0 licenses:"url('https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png');
+	content:"" ;
 	bottom: 5px;
 	color: var(--after_color);
 	text-align: center;
