@@ -1,8 +1,10 @@
 @media only screen and (max-width:600px){
 	.button_sz{width: 75%;}
+	.tt_back{width: 50%;}
 }
 @media only screen and (min-width:600px){
 	.button_sz{width: 150px;}
+	.tt_back{width: 20px;}
 }
 .son{
 	--box_color:#55f;
