@@ -59,37 +59,24 @@
 						var pid=document.getElementById("q").value;
 						var pURL=document.getElementById("linke").value;
 						//設定傳到DC的內容
-						var myEmbed = [{
-							"embeds": [
-								{
-									"title": "哥哥，求解",
-									"description": "哥哥，幫我解這題 ["+pid+"]("+pURL+") 我愛你歐",
-									"color": 16755404,
-									"footer": {
-										"text": ""
-									},
-									"author": {
-										"name": "小ㄌㄌ",
-										"url": "https://kagariet01.github.io/about",
-        						"icon_url": little_loli
-									},
-									"thumbnail": {
-										"url": little_loli
-									}
-								}
-							],
-							"content": ""
-						}];
-						var params = {
-							content: null,//內文
-							avatar_url: little_loli,//頭像
-							attachments: [],
-							thread_name: pid,//貼文名
-							flags: 4100,
-							username: "小ㄌㄌ",//bot名稱
-							embeds: myEmbed//傳送內容
-						};
-						request.send(JSON.stringify(params));//傳送回復到DC
+							var myEmbed = [{
+								"author": {
+									"name": pid,
+									"url": pURL,
+									"icon_url": little_loli
+								},
+								//"title": "求解",
+								//"description": "["+pid+"]("+pURL+")",//
+								"color": 16755404
+							}];
+							var params = {
+								username: "小ㄌㄌ",//bot名稱
+								embeds: myEmbed,//傳送內容
+								avatar_url: little_loli,//頭像
+								thread_name: pid,//貼文名
+								content:""
+							};
+						request.send(JSON.stringify(params));
 						alert("已送出，感謝您撥空填寫");
 						window.location.href=window.location.search;
 					}
