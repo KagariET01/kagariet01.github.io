@@ -14,66 +14,124 @@
 
 		<!--內文here-->
 		<div class="x_center">
-      <div style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width:100%;
+			<div style="
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				width:100%;
 			">
-        <h1 style="color: #fff;">OJ求解</h1>
+				<h1 style="color: #fff;">OJ求解</h1>
 				<p>
 					把題目連結貼在這邊，不久後，可能就會出現在<a href="/OJ_ans">這裡</a><br>
 					p.s. 解題者的CF rating大約是1400，請勿貼過難的題目，不然你永遠得不到解答
 				</p>
 				<textarea 
-          placeholder="我是匿名提問箱" 
-          type="text" 
-          name="q" 
-          id="q"
-          style="
-  					width: 70%;
-  					height: 100px;
+					placeholder="題目編號" 
+					type="text" 
+					name="q" 
+					id="q"
+					style="
+						width: 70%;
+						height: 50px;
+				"></textarea>
+				<textarea 
+					placeholder="題目連結" 
+					type="text" 
+					name="q" 
+					id="linke"
+					style="
+						width: 70%;
+						height: 50px;
 				"></textarea>
 				<input type="button" onclick="myFunction()" value="送出" style="width: 100px;height: 50px;">
-        <p style="color: #fff;">參考自<a href="https://wakeye.reflec5.repl.co/feed_back.html">https://wakeye.reflec5.repl.co/feed_back.html</a></p>
-        <script>
-          function myFunction(){
-            //webhook 網址
-            var hookURL="https://discordapp.com/api/webhooks/1164393786420506674/Vo1PRhFvhDh5t732ykWpeZehYLvnPcCBU4J2Kf7kPgY6os7v8uD0TRskveiVkQy3Ue59";
-            var request=new XMLHttpRequest();
-            request.open("POST",hookURL);
-            //設定傳送型態為json
-            request.setRequestHeader('Content-type', 'application/json');
-            //獲取輸入內容
-            var sheet=document.getElementById("q").value;
-						if(sheet==""){
-							alert("提問箱內容不可為空");
-							return 0;
-						}
-            //設定傳到DC的內容
-            var myEmbed = [{
-              "author": {
-                "name": "匿名提問箱服務", "icon_url":"https://cdn.discordapp.com/avatars/1133622599813972019/b4e79be90365547c96598b25d8b7b76d.webp"
-              },
-              "title": "有人提交了匿名提問",
-              "color": 16733525,
-              "fields": [
-                {
-                  "name": "內容",
-                  "value": sheet
-                }
-              ]
-            }];
-            var params = {
-              username: "尖叫ㄐ服務",//bot名稱
-              embeds: myEmbed//傳送內容
-            };
-            request.send(JSON.stringify(params));//傳送回復到DC
-            alert("已送出，感謝您撥空填寫問卷");
+				<p style="color: #fff;">參考自<a href="https://wakeye.reflec5.repl.co/feed_back.html">https://wakeye.reflec5.repl.co/feed_back.html</a></p>
+				<script>
+					function myFunction(){
+						//webhook 網址
+						var hookURL="https://discordapp.com/api/webhooks/1164393786420506674/Vo1PRhFvhDh5t732ykWpeZehYLvnPcCBU4J2Kf7kPgY6os7v8uD0TRskveiVkQy3Ue59";
+						var request=new XMLHttpRequest();
+						var little_loli="https://avatars.githubusercontent.com/u/66681962";
+						request.open("POST",hookURL);
+						//設定傳送型態為json
+						request.setRequestHeader('Content-type', 'application/json');
+						//獲取輸入內容
+						var pid=document.getElementById("q").value;
+						var pURL=document.getElementById("linke").value;
+						//設定傳到DC的內容
+						var myEmbed = [{
+							"embeds": [
+								{
+									"title": "哥哥，求解",
+									"description": "哥哥，幫我解這題 ["+pid+"]("+pURL+") 我愛你歐",
+									"color": 16755404,
+									"footer": {
+										"text": ""
+									},
+									"author": {
+										"name": "小ㄌㄌ",
+										"url": "https://kagariet01.github.io/about",
+        						"icon_url": little_loli
+									},
+									"thumbnail": {
+										"url": little_loli
+									}
+								}
+							],
+							"content": ""
+						}];
+						var params = {
+							content: null,//內文
+							avatar_url: little_loli,//頭像
+							attachments: [],
+							thread_name: pid,//貼文名
+							flags: 4100,
+							username: "小ㄌㄌ",//bot名稱
+							embeds: myEmbed//傳送內容
+						};
+						request.send(JSON.stringify(params));//傳送回復到DC
+						alert("已送出，感謝您撥空填寫");
 						window.location.href=window.location.search;
-          }
-        </script>
+					}
+					/*
+					How to use Webhook
+					var myEmbed = [{
+							{
+									"title": "",//大標題
+									"description": "",//簡述(標題下方)
+									"color": 16711680,
+									"footer": {//最下方小圖
+										"text": "",
+										"icon_url": ""
+									},
+									"author": {
+										"name": "",//上方作者信息
+										"icon_url": ""
+     								"url": "https://AutherURL.com",//作者連結
+									},
+									"fields": [//內文
+										{
+											"name": "ewge",
+											"value": "ghn f",
+											"inline": true
+										}
+									],
+									"footer": {
+										"text": "little_loli",//最下方資訊
+										"icon_url": "https://avatars.githubusercontent.com/u/66681962"
+									},
+									"thumbnail": {
+										"url": ""//左方大圖的縮圖
+									}
+									"image": {//內文大圖
+										"url": "https://avatars.githubusercontent.com/u/66681962"
+									},
+								}
+							],
+							"content": "單純訊息"
+						}];
+					*/
+				</script>
 			</div>
 
 		</div>
