@@ -59,24 +59,34 @@
 						var pid=document.getElementById("q").value;
 						var pURL=document.getElementById("linke").value;
 						//設定傳到DC的內容
-							var myEmbed = [{
-								"author": {
-									"name": pid,
-									"url": pURL,
-									"icon_url": little_loli
-								},
-								//"title": "求解",
-								//"description": "["+pid+"]("+pURL+")",//
-								"color": 16755404
-							}];
-							var params = {
-								username: "小ㄌㄌ",//bot名稱
-								embeds: myEmbed,//傳送內容
-								avatar_url: little_loli,//頭像
-								thread_name: pid,//貼文名
-								content:""
-							};
+						var myEmbed = [{
+							"author": {
+								"name": pid,
+								"url": pURL,
+								"icon_url": little_loli
+							},
+							//"title": "求解",
+							//"description": "["+pid+"]("+pURL+")",//
+							"color": 16755404
+						}];
+						var params = {
+							username: "小ㄌㄌ",//bot名稱
+							embeds: myEmbed,//傳送內容
+							avatar_url: little_loli,//頭像
+							thread_name: pid,//貼文名
+							content:""
+						};
 						request.send(JSON.stringify(params));
+						hookURL="https://discordapp.com/api/webhooks/1164406327372681307/pm33I2tFKDBGz5sjKeKYeXdsXrl8vXTNKsMe5lGLJtAyd12qNOSrZY8KPwc1hIzkQ7et";
+						params={
+							username: "小ㄌㄌ",//bot名稱
+							embeds: myEmbed,//傳送內容
+							avatar_url: little_loli,//頭像
+							//thread_name: pid,//貼文名
+							content:""
+						};
+						request.send(JSON.stringify(params));
+
 						alert("已送出，感謝您撥空填寫");
 						window.location.href=window.location.search;
 					}
