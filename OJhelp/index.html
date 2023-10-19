@@ -77,7 +77,13 @@
 							content:""
 						};
 						request.send(JSON.stringify(params));
+						
+
+						
 						hookURL="https://discordapp.com/api/webhooks/1164406327372681307/pm33I2tFKDBGz5sjKeKYeXdsXrl8vXTNKsMe5lGLJtAyd12qNOSrZY8KPwc1hIzkQ7et";
+						request=new XMLHttpRequest();
+						request.open("POST",hookURL);
+						request.setRequestHeader('Content-type', 'application/json');
 						params={
 							username: "小ㄌㄌ",//bot名稱
 							embeds: myEmbed,//傳送內容
