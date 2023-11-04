@@ -5,6 +5,10 @@
 	--shadow_padding_add:1px;
 }
 
+p{
+	color: #fff;
+}
+
 #Header {
 	width: 90%;
 	margin: 0 auto;
