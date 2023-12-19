@@ -54,8 +54,8 @@
 					let mysearch=document.getElementById("q").value;
 					let wsp=false;
 					for(let nw of sp){
-						for(let key of nw.key){
-							if(mysearch.include(key)){
+						for(let key of nw["key"]){
+							if(mysearch.includes(key)){
 								nw.op();
 								sp=true;
 								break;
