@@ -26,12 +26,12 @@
 					width: 70%;
 					height: 50px;
 				" 
-				onclick="myFunction()">
+				onkeydown="if(event.keyCode==13)myFunction()">
 			<input type="button" onclick="myFunction()" value="給我搜" style="width: 100px;height: 50px;">
 			</ㄎ>
 
 			<script>
-				let sp = [
+				const sp = [
 					{
 						"key":["答案"],
 						"op":function(){
@@ -57,15 +57,15 @@
 						for(let key of nw["key"]){
 							if(mysearch.includes(key)){
 								nw.op();
-								sp=true;
+								wsp=true;
 								break;
 							}
 						}
-						if(sp){
+						if(wsp){
 							break;
 						}
 					}
-					if(!(sp)){
+					if(!(wsp)){
 						window.location.href="https://www.bing.com/search?q="+document.getElementById("q").value;
 					}
 				}
