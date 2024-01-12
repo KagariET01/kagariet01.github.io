@@ -3,22 +3,21 @@
 包括但不限於網頁名、網頁icon、網頁模板、CSS...
 一樣可直接調用
 */
+let CFGtxt=readfile('/config.json');
+let CFG=stoJSON(CFGtxt);
+
 //icon
-var iconURL=CFG["iconURL"];
-var iconHTML='<link rel="icon" type="image/x-icon" href="'+iconURL+'">'
+let iconURL=CFG["iconURL"];
+let iconHTML='<link rel="icon" type="image/x-icon" href="'+iconURL+'">'
 document.getElementsByTagName("head")[0].innerHTML+=iconHTML;
 
-var headURL=CFG["headURL"];
-document.getElementById('head').innerHTML=readfile(headURL);
-
-var titlename=CFG["title"];
-var titleHTML='<title>'+titlename+'</title>'
+let titlename=CFG["title"];
+let titleHTML='<title>'+titlename+'</title>'
 document.getElementsByTagName("head")[0].innerHTML+=titleHTML;
 
-var vert="";
-for(var i=0;i<CFG["button"].length;i++){
-	console.log(vert);
-	vert+="\""+CFG["button"][i]["name"]+":";
-	vert+=CFG["button"][i]["value"]+" \"";
-}
-document.head.innerHTML+="<style>body::after{content:"+vert+";}</style>"
+let headadd=readfile("/TEMP/head.html");
+document.getElementsByTagName("head")[0].innerHTML+=headadd;
+
+
+let headURL=CFG["headURL"];
+document.getElementById('header').innerHTML=readfile(headURL);

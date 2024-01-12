@@ -1,47 +1,19 @@
-/*基礎設定*/
-:root{
-	/*顏色*/
-	--box_color:#5ff;/*陰影(光暈)顏色*/
-	--border_color:#aff;/*邊框顏色，邊框顏色調得比光暈顏色量，可增加整體亮度感*/
-	--box_background_color:#5ff1;/*背景色*/
-	--box_color_2:#f00;/*指標指到時，變成的顏色*/
-	--border_color_2:#f55;/*邊框顏色，將此亮度調高可以讓光暈效果更強*/
-	--box_background_color_2:#f003;/*指標指到時，變成的背景色*/
-	/*尺寸、大小*/
-	--shadow_len:20px;/*模糊擴散等級*/
-	--margin_size:5px;/*向外留邊*/
-	--border_width: 2px;/*邊框大小*/
-	--padding_size: 15px;/*向內留邊*/
-	--radius:10px;/*圓角大小*/
-	--after_color:#fff8;/*尾端文字顏色*/
-	--h1_size: 40px;/*標題文字大小*/
-	color: #fff;/*文字顏色*/
-	--bg_color:#000;/*被景色*/
-	--button_width:100px;/*按鈕大小*/
-	/*文字大小、字體*/
-	--h1_fontsize: 40px;
-	font-family: 'font-hun',"Microsoft JhengHei";
-}
-.PCIC{
-	--box_color:#55f;
-	--border_color:#aaf;
-	--box_background_color:#55f1;
-	--box_color_2:#f5f;
-	--border_color_2:#faf;
-	--box_background_color_2:#f5f1;
-}
+/*基本樣式表*/
 
 
 
-
-
-body{
+html,body{
 	background: var(--bg_color);
+	min-height: 100%;
+	margin: 0;
+	padding: 8px;
+	transition:all 0.25s;
+	color: var(--txt_color);/*文字顏色*/
 }
 button{
-	background-color: #000;
+	background-color: #0000;
+	color:var(--txt_color);
 	border: none;
-	color: #fff;
 }
 .box{
 	box-shadow: 0 0 var(--shadow_len) 0px var(--box_color), inset 0 0 var(--shadow_len) 0 var(--box_color);
@@ -52,9 +24,10 @@ button{
 	padding: calc(var(--padding_size));
 	border-radius:var(--radius);
 	background-color: var(--box_background_color);
-	transition:all 0.25s;
 }
-
+.box_botton{
+  margin: calc(var(--margin_size));
+}
 .box_botton::after{
 	content: '';
 	display: flex;
@@ -63,7 +36,6 @@ button{
 	height: 1px;
 	width: 100%;
 	background-color: var(--border_color);
-	transition:all 0.25s;
 	margin-bottom: var(--shadow_len);
 }
 .button{
@@ -100,7 +72,7 @@ hr{
 }
 
 body::after{
-	content:"" ;
+	content:"by:et01 cc by-nc-sa"url('https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png');
 	bottom: 5px;
 	color: var(--after_color);
 	text-align: center;
@@ -115,4 +87,12 @@ a{
 	--box_color:var(--box_color_2);
 	--box_background_color:var(--box_background_color_2);
 	--border_color:var(--border_color_2);
+	transform:scale(var(--anime_power),var(--anime_power));
+}
+.anime{
+	transform: scale(1,1);
+	transition: all var(--anime_time) cubic-bezier(.2,.8,.2,.8);
+}
+.anime::after{
+	transition: all var(--anime_time) cubic-bezier(.2,.8,.2,.8);
 }

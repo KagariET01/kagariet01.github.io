@@ -2,28 +2,17 @@
 
 <html lang="zh-TW">
 	<head>
-		<script src="/JS/fn.js"></script>
-		<script>
-			var CFGtxt=readfile('/config.json');
-			var CFG=stoJSON(CFGtxt);
-		</script>
-		<link id="style_css" rel="stylesheet" type="text/css" href="/TEMP/style.css">
-		<link id="style_css" rel="stylesheet" type="text/css" href="/TEMP/typeset.css">
-		<meta charset="UTF-8"> 
-		<script>
-			//window.location.href=nowURL+"/blog";
-		</script>
 	</head>
 
 	<body class="flex icenter column">
-		<div id="head" class="flex wfull center">
+		<header id="header" class="flex wfull center">
 			head
-		</div>
+		</header>
 
 		<div class="flex center column text_center h2" style="width: 75%;">
 			<div class="box flex column">
-				<div class="box_botton wfull">
-					by 板中電神
+				<div class="box_botton">
+					by 板中電神 aka 小石石 and 水降
 				</div>
 				<div class="wfull flex spsame center wrap row MSN iright">
 					
@@ -78,8 +67,15 @@
 
 
 
-			<div class="box flex column h2">
-				<div class="box_botton wfull">
+			<div class="box flex column h2" style="
+          --box_color_2:#f55;
+          --border_color_2:#faa;
+          --box_background_color_2:#f551;
+          --box_color:#ff5;
+          --border_color:#ffa;
+          --box_background_color:#ff51;
+        ">
+				<div class="box_botton">
 					網頁備份
 				</div>
 				<div class="wfull flex spsame center wrap row MSN iright">
@@ -95,24 +91,25 @@
 
 
 			<div class="box flex column h2">
-				<button class="box_botton wfull h2" onclick="showrick();">
+    		<script>
+    			function showrick(){
+            document.getElementById("rick").style.id="inline";
+    				console.log(document.getElementById("rick").style.id);
+    			}
+    		</script>
+				<button class="box_botton wfull h2" onclick="document.getElementById('rick').style.display='inline';">
 					NEVER GONNA GIVE YOU UP!
 				</button>
-				<div class="wfull flex spsame center wrap row MSN iright" id="rick">
-					
+				<div class="wfull flex spsame center wrap row MSN iright" id="rick" style="display: none;">
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share" allowfullscreen="" id="rick"></iframe>
 				</div>
 			</div>
 
 
 
 		</div>
-		
-		<script src="/JS/temp.js"></script>
-		<script>
-			var rickHTML='<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>'
-			function showrick(){
-				document.getElementById("rick").innerHTML=rickHTML;
-			}
-		</script>
+
+    <script src="/JS/fn.js"></script>
+    <script src="/JS/temp.js"></script>
 	</body>
 </html>

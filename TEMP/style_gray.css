@@ -1,0 +1,26 @@
+/*顏色設定檔_深色*/
+
+/*基礎設定*/
+:root{
+	/*顏色*/
+	--box_color:#5ff;/*陰影(光暈)顏色*/
+	--border_color:#aff;/*邊框顏色，邊框顏色調得比光暈顏色量，可增加整體亮度感*/
+	--box_background_color:#5ff1;/*背景色*/
+	--box_color_2:#f00;/*指標指到時，變成的顏色*/
+	--border_color_2:#f55;/*邊框顏色，將此亮度調高可以讓光暈效果更強*/
+	--box_background_color_2:#f003;/*指標指到時，變成的背景色*/
+	--after_color:#fff8;/*尾端文字顏色*/
+	--txt_color: #fff;/*文字色*/
+	--bg_color:#444;/*背景色*/
+}
+.PCIC{
+	--box_color:#55f;
+	--border_color:#aaf;
+	--box_background_color:#55f1;
+	--box_color_2:#f5f;
+	--border_color_2:#faf;
+	--box_background_color_2:#f5f1;
+}
+
+
+

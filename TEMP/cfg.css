@@ -1,0 +1,16 @@
+:root{
+	/*尺寸、大小*/
+	--shadow_len:20px;/*模糊擴散等級*/
+	--margin_size:5px;/*向外留邊*/
+	--border_width: 2px;/*邊框大小*/
+	--padding_size: 15px;/*向內留邊*/
+	--radius:10px;/*圓角大小*/
+	--h1_size: 40px;/*標題文字大小*/
+	--button_width:100px;/*按鈕大小*/
+	/*文字大小、字體*/
+	--h1_fontsize: 40px;
+	/*動畫力度*/
+	--anime_time: .5s;
+	--anime_power: 1.1;
+	font-family: 'font-hun',"Microsoft JhengHei";
+}
