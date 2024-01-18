@@ -1,6 +1,8 @@
 {
-	"iconURL":"/TEMP/icon.jpg",
-	"headURL":"/TEMP/header.html",
+	"iconURL":"/TEMP/img/icon.jpg",
+	"headURL":"/TEMP/html/header.html",
 	"title":"ET01web",
-	"button":" "
+	"apps":{
+		"PCIC":""
+	}
 }

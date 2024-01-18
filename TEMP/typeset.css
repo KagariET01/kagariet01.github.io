@@ -4,6 +4,9 @@
 .wfull{
 	width: 100%;
 }
+.hfull{
+	height: 100%;
+}
 
 .text_center{/*文字至中*/
 	text-align: center;
@@ -36,6 +39,9 @@
 .spsame{/*元素平均分攤，空格等大*/
 	justify-content: space-evenly;
 }
+.spc{
+	justify-content: space-between;
+}
 
 /*物件垂直排版*/
 .cleft{/*元素靠上(預設)*/
@@ -51,6 +57,7 @@
 	align-content: stretch;
 }
 
+
 /*大小不一樣大的元素對其*/
 .ileft{/*元素向上對其(預設)*/
 	align-items: flex-start;
@@ -63,6 +70,9 @@
 }
 .isame{/*拉成一樣大*/
 	align-items: stretch;
+}
+.ibl{
+	align-items: baseline;
 }
 
 .wrap{/*自動換行*/

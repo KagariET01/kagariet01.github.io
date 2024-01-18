@@ -10,7 +10,7 @@
 	/*文字大小、字體*/
 	--h1_fontsize: 40px;
 	/*動畫力度*/
-	--anime_time: .5s;
+	--anime_time: 1s;
 	--anime_power: 1.1;
 	font-family: 'font-hun',"Microsoft JhengHei";
 }

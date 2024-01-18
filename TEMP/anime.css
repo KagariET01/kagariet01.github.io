@@ -1,0 +1,11 @@
+
+.anime:hover{/*啟動動畫*/
+	transition: all var(--anime_time) cubic-bezier(.2,.8,.2,.8);
+}
+.anime{
+	transform: scale(1,1);
+	transition: all var(--anime_time) cubic-bezier(.2,.8,.2,.8);
+}
+.anime::after{
+	transition: all var(--anime_time) cubic-bezier(.2,.8,.2,.8);
+}

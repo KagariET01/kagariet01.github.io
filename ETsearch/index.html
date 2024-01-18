@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 
 <html lang="zh-TW">
-  <head>
-  </head>
 
-	<body>
-		<header id="header" class="flex wfull center">
-			head
-		</header>
+<head>
+	<link rel="stylesheet" type="text/css" href="/TEMP/df.css">
+</head>
 
-		<div id="main">
+<body>
+	<header id="header" class="flex wfull center">
+		head
+	</header>
 
-			<form id="f1" action="https://www.bing.com/search" style="
+	<div id="main">
+
+		<form id="f1" action="https://www.bing.com/search" style="
 				display: flex;
 				justify-content: center;
 				align-items: center;
 			">
-				<input type="text" name="q" style="
+			<input type="text" name="q" style="
 					width: 70%;
 					height: 50px;
 				">
-				<input type="button" onclick="myFunction()" value="給我搜" style="width: 100px;height: 50px;">
-			</form>
+			<input type="button" onclick="myFunction()" value="給我搜" style="width: 100px;height: 50px;">
+		</form>
 
-			<script>
-				function myFunction() {
-					var input=document.getElementById("f1");
-					var mysearch=input.elements[0].value;
-					if(input.elements[0].value=="答案"){
-						while(!confirm("聽說只要把result的值設成I_want_AC就能AC，那你知道現在要如何AC了把")) {
-							alert("多讀幾遍就會知道要如何AC的，試試看");
-						}
-						alert("Good boy ，那現在就回 https://kagariet01.github.io 解題吧");
-					}else if(mysearch=="鮭魚和尖叫雞會不會賽跑？" || mysearch=="如果會的話誰會先到終點？" || mysearch=="鮭魚和尖叫雞會不會賽跑？如果會的話誰會先到終點？"){
-						alert("ㄌㄌ\n-by Ststorz");
-					}else{
-						document.getElementById("f1").submit();
+		<script>
+			function myFunction() {
+				var input = document.getElementById("f1");
+				var mysearch = input.elements[0].value;
+				if (input.elements[0].value == "答案") {
+					while (!confirm("聽說只要把result的值設成I_want_AC就能AC，那你知道現在要如何AC了把")) {
+						alert("多讀幾遍就會知道要如何AC的，試試看");
 					}
+					alert("Good boy ，那現在就回 https://kagariet01.github.io 解題吧");
+				} else if (mysearch == "鮭魚和尖叫雞會不會賽跑？" || mysearch == "如果會的話誰會先到終點？" || mysearch == "鮭魚和尖叫雞會不會賽跑？如果會的話誰會先到終點？") {
+					alert("ㄌㄌ\n-by Ststorz");
+				} else {
+					document.getElementById("f1").submit();
 				}
-			</script>
-			
+			}
+		</script>
+
 
 
 	</div>
 
-    <script src="/JS/fn.js"></script>
-    <script src="/JS/temp.js"></script>
-	</body>
+	<script src="/TEMP/JS/fn.js"></script>
+	<script src="/TEMP/JS/temp.js"></script>
+</body>
+
 </html>
