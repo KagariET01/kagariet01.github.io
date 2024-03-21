@@ -2,15 +2,31 @@
 <html lang="zh-TW">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="/TEMP/df.css">
+	<link rel="stylesheet" type="text/css" href="/TEMP/df.css">
 </head>
 
 <body>
-  <header id="header" class="flex wfull center">
-    head
-  </header>
-  <script src="/TEMP/JS/fn.js"></script>
-  <script src="/TEMP/JS/temp.js"></script>
+	<header id="header" class="flex wfull center">
+		head
+	</header>
+
+	<main style="width: 80%;text-align: center;">
+		p.s. 點擊名稱即可顯示、隱藏資訊
+		<div class="box">
+			<button class="h1 wfull" onclick="show_post('ET01')">網站總管理員：ET01</button>
+			<div class="wfull" id="ET01"></div>
+		</div>
+		<div class="box">
+			<button class="h1 wfull" onclick="show_post('KagariET01')">網站副管理員：KagariET01</button>
+			<div class="wfull" id="KagariET01"></div>
+		</div>
+
+	</main>
+
+
+	<script src="/TEMP/JS/fn.js"></script>
+	<script src="/TEMP/JS/temp.js"></script>
+	<script src="script.js"></script>
 </body>
 
 </html>

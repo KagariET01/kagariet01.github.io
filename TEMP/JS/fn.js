@@ -3,17 +3,11 @@
 只要用<script src="/JS/fn.js"></script>就能使本區所有內容
 */
 
-function readfile(URL){//傳入網址，回傳該檔案內容
-	let OSbot=new XMLHttpRequest;//檔案操作器
-	OSbot.open("GET",URL,0);
-	OSbot.send(null);
-	let re;
-	if(OSbot.status==404){
-		re=null;
-	}else{
-		re=OSbot.responseText;
-	}
-	return re;
+async function readfile(URL){//傳入網址，回傳該檔案內容
+	let fe=await fetch(URL);
+	data=await fe.text();
+	console.debug("[DBG]read file successful \""+URL+"\"");
+	return data;
 }
 function stoHTML(str){//將字串轉換成HTML
 	let re=document.createElement('div');
