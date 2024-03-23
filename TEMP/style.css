@@ -1,12 +1,14 @@
 /*anime*/
-.anime:hover{/*啟動動畫*/
-	--box_color:var(--box_color_2);
-	--box_background_color:var(--box_background_color_2);
-	--border_color:var(--border_color_2);
-	transform:scale(var(--anime_power),var(--anime_power));
+.anime:hover {
+	/*啟動動畫*/
+	--box_color: var(--box_color_2);
+	--box_background_color: var(--box_background_color_2);
+	--border_color: var(--border_color_2);
+	transform: scale(var(--anime_power), var(--anime_power));
 }
-.anime{
-	transform: scale(1,1);
+
+.anime {
+	transform: scale(1, 1);
 }
 
 
@@ -17,20 +19,31 @@
 
 
 
-html,body{
+html,
+body {
 	background: var(--bg_color);
 	/*transition:all 0.25s;*/
-	color: var(--txt_color);/*文字顏色*/
+	color: var(--txt_color);
+	/*文字顏色*/
+	font-family: "Microsoft JhengHei";
+	font-size: 20px;
 }
-html{
+
+html {
 	height: 100%;
 }
-body{
+
+body {
 	margin: 8px;
 	height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
 }
-body::after{
-	content:"by:et01 cc by-nc-sa"url('https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png');
+
+body::after {
+	content: "by: ET01 License under CC by-nc-sa " url('https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png');
 	bottom: 5px;
 	color: var(--after_color);
 	text-align: center;
@@ -43,26 +56,30 @@ body::after{
 
 
 /*box 設定*/
-button{
+button,
+.button {
 	background-color: #0000;
-	color:var(--txt_color);
+	color: var(--txt_color);
 	border: none;
-	width: 200px;
+	width: 250px;
 }
-.box{
+
+.box {
 	box-shadow: 0 0 var(--shadow_len) 0px var(--box_color), inset 0 0 var(--shadow_len) 0 var(--box_color);
-	margin: calc(var(--margin_size));
+	margin: calc(var(--shadow_len));
 	border-width: var(--border_width);
 	border-style: solid;
 	border-color: var(--border_color);
 	padding: calc(var(--padding_size));
-	border-radius:var(--radius);
+	border-radius: var(--radius);
 	background-color: var(--box_background_color);
 }
-.box_botton{
-  margin: calc(var(--margin_size));
+
+.box_botton {
+	margin: calc(var(--margin_size));
 }
-.box_botton::after{
+
+.box_botton::after {
 	content: '';
 	display: flex;
 	/* clip-path: polygon(0 0,0 100%,100% 100%,100% 0); */
@@ -73,60 +90,92 @@ button{
 	margin-bottom: var(--shadow_len);
 }
 
-.normal_box, .normal_box:hover{
+.normal_box,
+.normal_box:hover {
 	box-shadow: none;
-	transform: scale(1,1);
+	transform: scale(1, 1);
 }
-.normal_box::after{
+
+.normal_box::after {
 	box-shadow: none;
 	margin: 0;
 }
 
 /*字體設定*/
-.h0{
+.h0 {
 	font-size: 60px;
+	font-weight: bold;
 }
-.h1{
+
+.h1 {
 	font-size: 40px;
+	font-weight: bold;
 }
-.h2{
-	font-size: 25px;
+
+.h2 {
+	font-size: 30px;
+	font-weight: bold;
 }
-p{
+
+p,
+div,
+tr,
+td {
 	font-size: 20px;
 }
 
-a{
+/*表格設定*/
+table,
+thead,
+tbody,
+tfoot,
+tr {
+	min-width: 100%;
+}
+
+
+a {
 	color: var(--link_color);
 	text-decoration: none;
 	font-size: 20px;
 }
 
 
-hr{
+hr {
 	box-shadow: 0 0 var(--shadow_len) var(--border_width) var(--box_color);
 	border-color: var(--border_color);
+	width: 100%;
+}
+
+
+details>summary {
+	cursor: pointer;
+	list-style: none;
 }
 
 /*字體設定*/
 @font-face {
-	font-family: 'font-hun';
+	font-family: "font-hun";
 	src:
-	url("/TEMP/font/hun/hun.woff2") format("woff"),
-	url("/TEMP/font/hun/hun.woff") format("woff"),
-	url("/TEMP/font/hun/hun.eot") format("embedded-opentype"),
-	url("/TEMP/font/hun/hun.ttf")format("truetype");
+		url("/TEMP/font/hun/hun.woff2") format("woff"),
+		url("/TEMP/font/hun/hun.woff") format("woff"),
+		url("/TEMP/font/hun/hun.eot") format("embedded-opentype"),
+		url("/TEMP/font/hun/hun.ttf")format("truetype");
 }
-.hun{
+
+.hun {
 	font-family: 'font-hun';
 }
-.MSN{
-	font-family: 'Microsoft JhengHei UI';
+
+.MSN {
+	font-family: "Microsoft JhengHei";
 }
 
 
+details summary::-webkit-details-marker {
+	display: none;
+}
 
-
-
-
-
+main {
+	width: min(80%, 1000px);
+}

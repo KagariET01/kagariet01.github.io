@@ -1,0 +1,33 @@
+:root{
+	--bgs:0%;
+}
+
+.docs:hover{
+	--bgs:100%;
+}
+.docs{
+	padding: 8px 0px;
+}
+.lb{
+	width: 4px;
+	height: 100%;
+	background-color: var(--border_color);
+}
+.mainbox{
+	width: calc(100% - 8px);
+}
+.title{
+	margin-left: 8px;
+}
+.btn{
+	margin-left: 8px;
+}
+.bg{
+	width:var(--bgs);
+	height: 100%;
+	display: block;
+	position: absolute;
+	background-image: linear-gradient(90deg, #5ff4, #0000);
+	transition: all var(--anime_time) cubic-bezier(.2,.8,.2,.8);
+}
+

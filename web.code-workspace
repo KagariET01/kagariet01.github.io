@@ -3,14 +3,6 @@
 		{
 			"name": "web",
 			"path": "."
-		},
-		{
-			"name": "nginx_log",
-			"path": "/var/log/nginx"
-		},
-		{
-			"name": "nginx_cfg",
-			"path": "/etc/nginx"
 		}
 	]
 }
