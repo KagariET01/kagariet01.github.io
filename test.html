@@ -1,15 +1,1 @@
-<!DOCTYPE html>
-<html lang="zh-tw">
-
-<head>
-	<meta charset="UTF-8">
-	<title>ET01_web</title>
-	<link rel="stylesheet" type="text/css" href="/temp.css">
-	<link rel="stylesheet" type="text/css" href="/blog/blog.css">
-</head>
-
-
-<body>
-</body>
-
-</html>
+<html><head></head><body style="color: #0000;font-size: 0;">const original_data={"110202":695.4,"110490":666,"110648":638,"210514":568,"310133":429,"110383":368,"210219":356,"210360":340,"310350":318,"210475":266,"210580":236,"310513":236,"310601":236,"310046":213,"310206":212,"310271":181,"210696":170,"310467":170,"210568":165,"210022":148,"210674":112,"210244":105,"310446":100,"210129":100,"310666":50,"310632":33,"210438":4,"310714":4,"110059":0,"1XXXXX":0,"310218":0,"310293":0,"310351":0,"310451":0,"310483":0,"310521":0,"310676":0};const py=["110383","210219","210360","210580","210244"];const data_sort_key="global";const avg=(lst)=&gt;{let sum=0;for(let i of lst)sum+=i;return sum/lst.length;};const std=(lst)=&gt;{let barx=avg(lst);let sum=0;for(let i of lst)sum+=(i-barx)**2;return Math.sqrt(sum/(lst.length-1));};const query=()=&gt;{let lst=document.getElementById("Scoreboard_body").getElementsByTagName("tr");document.getElementById("Scoreboard_body").getElementsByTagName("tr")[0].getAttribute("data-user");let data={};for(let i of lst){let id=i.getAttribute("data-user");if(id.includes("tmp"))continue;let lst2=i.getElementsByTagName("td");let score=0;for(let j of lst2){if(j.getAttribute("data-sort_key")==data_sort_key){score=parseFloat(j.innerText);break;}}data[id]=score;data[id]+=original_data[id];}for(let i of py){data[i]=0;}let all_score_sort=[];for(let i in data){all_score_sort.push(data[i]);}all_score_sort.sort((a,b)=&gt;b-a);all_score_sort=all_score_sort.slice(0,12);let nwstd=std(all_score_sort);let addta=[];for(let i in data){addta.push([data[i]+(i[0]-1)*nwstd,i]);}addta.sort((a,b)=&gt;b[0]-a[0]);console.log(addta);let rank_score={};for(let i in addta){rank_score[addta[i][1]]=[(parseInt(i)+1),addta[i][0]];}for(let i of lst){let id=i.getAttribute("data-user");if(id.includes("tmp"))continue;let lst2=i.getElementsByTagName("td");for(let j of lst2){if(j.getAttribute("class")=="l_name"){j.innerText=rank_score[id][0];j.innerText+=" ("+rank_score[id][1].toFixed(2)+")";j.style.color="#0000";}}}};const wait=(ms)=&gt;{return new Promise(resolve=&gt;setTimeout(resolve,ms));};const call=async()=&gt;{while(1){await wait(10000);query();}};call();</body></html>
